@@ -1,10 +1,10 @@
 # A Unique name for this workflow
 name: CI-ABACUS-DEVPRO
-git 
+
 # Definition when the workflow should run
 on:
   workflow_dispatch:
-  
+
 # Jobs to be executed
 jobs:
   formatting-and-linting:
