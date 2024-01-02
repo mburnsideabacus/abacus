@@ -82,7 +82,11 @@ jobs:
 
       # Run Deploy Apex
       - name: "Deploy Apex and Run Specified Tests"
+<<<<<<< HEAD
         run: sf project deploy start --metadata AuraDefinitionBundle --metadata ApexClass --metadata ApexTrigger --metadata Flow --metadata LightningMessageChannel --target-org AbacusDEVPRO --test-level RunSpecifiedTests --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler
+=======
+        run: sf project deploy start --metadata AuraDefinitionBundle --metadata ApexClass --metadata ApexTrigger --metadata Flow --metadata LightningMessageChannel --target-org LFLHyperPARTIAL --test-level RunSpecifiedTests --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler TestLFLLoginBannerController
+>>>>>>> a582109e1b3f3ba4643e45edaa24101e30d387cd
 
       # Run Deploy LWC
       - name: "Deploy LWC"
