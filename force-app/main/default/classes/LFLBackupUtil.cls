@@ -50,7 +50,7 @@ public class LFLBackupUtil {
     mail.setToAddresses(new List<String>{ email });
     mail.setReplyTo('batch@acme.com');
     mail.setSenderDisplayName('Backup Cleaner');
-    mail.setSubject(orgName+': '+'BACKUP library cleaned');
+    mail.setSubject(orgName + ': ' + 'BACKUP library cleaned');
 
     mail.setPlainTextBody(keepList.size() + 'backup ZIP files retained.');
 
