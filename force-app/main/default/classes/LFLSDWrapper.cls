@@ -9,7 +9,7 @@
  */
 
 public class LFLSDWrapper implements Comparable {
-  public sd__c sd;
+   public sd__c sd;
 
   // Constructor
   public LFLSDWrapper(sd__c sdin) {
