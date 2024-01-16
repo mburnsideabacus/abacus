@@ -22,7 +22,7 @@ public class LFLBackupUtil {
   public Integer cleanupbackups() {
     List<Id> keepList = new List<Id>();
 
-    string emailMessageBody = 'Backup Files Retained:\n';
+    string emailMessageBody = 'ZIP Files Retained:\n-------------------\n';
 
     for (ContentDocument cdkeep : [
       SELECT id, Title, ContentSize
@@ -31,8 +31,11 @@ public class LFLBackupUtil {
       ORDER BY createddate DESC
       LIMIT 7
     ]) {
-      decimal size = (decimal) cdkeep.ContentSize / 1024 / 1024;
-      emailMessageBody += cdkeep.Title + ' (' + size.setScale(4) + ' MB) \n';
+      emailMessageBody +=
+        cdkeep.Title +
+        ' (' +
+        cdkeep.ContentSize +
+        ' bytes) \n';
       keepList.add(cdkeep.Id);
     }
     System.debug(emailMessageBody);
