@@ -1306,4 +1306,8 @@ System.debug(getPopularCBOC);
 List<client_boc__c> cbocList = L4LController.getActiveCBOCList('0018t000002yucNAAQ');
 System.debug('size = '+cbocList.size());
 
-L4LSessionStatsControll
+
+
+
+Logger.error('Test error from Mike ignore this message');
+Logger.saveLog();

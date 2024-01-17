@@ -31,11 +31,8 @@ public class LFLBackupUtil {
       ORDER BY createddate DESC
       LIMIT 7
     ]) {
-      emailMessageBody +=
-        cdkeep.Title +
-        ' (' +
-        cdkeep.ContentSize +
-        ' bytes) \n';
+      decimal size = (decimal) cdkeep.ContentSize / 1024 / 1024;
+      emailMessageBody += cdkeep.Title + ' (' + size.setScale(4) + ' MB) \n';
       keepList.add(cdkeep.Id);
     }
     System.debug(emailMessageBody);
