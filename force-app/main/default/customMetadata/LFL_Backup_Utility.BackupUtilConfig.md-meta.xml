@@ -4,11 +4,11 @@
     <protected>false</protected>
     <values>
         <field>Email_List__c</field>
-        <value xsi:type="xsd:string">mburnside@salesforce.com,burnside.mike@gmail.com</value>
+        <value xsi:type="xsd:string">mburnside@salesforce.com,team@coaspire.com.au</value>
     </values>
     <values>
         <field>FirstPublishLocationId__c</field>
-        <value xsi:type="xsd:string">058OZ0000002OflYAE</value>
+        <value xsi:type="xsd:string">0585h000000DYdWAAW</value>
     </values>
     <values>
         <field>RetentionDays__c</field>
