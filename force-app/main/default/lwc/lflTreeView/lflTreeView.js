@@ -148,7 +148,7 @@ export default class LflTreeView extends LightningElement {
     if (filterKey.length == 0) {
       if (this.searchValue) {
         this.handleSearchKeyword();
-      }
+      } 
       this.gridData = this.initData;
       console.log("REFRESH");
     }
