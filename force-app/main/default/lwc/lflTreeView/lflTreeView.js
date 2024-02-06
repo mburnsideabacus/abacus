@@ -441,37 +441,49 @@ export default class LflTreeView extends LightningElement {
       "";
     this.template.querySelector('lightning-input[data-name="filter"]').value =
       "";
+
     this.gridData = JSON.parse(JSON.stringify(this.initData));
     this.allData = JSON.parse(JSON.stringify(this.initData));
 
-    /*
-    getJSONTree({
-      searchStr: "reserved"
-    })
-      .then((result) => {
-        this.gridData = JSON.parse(result);
-        this.allData = JSON.parse(result);
-        this.initData = JSON.parse(result);
-        this.displayGridLengths("XXXXX after getJSONTree in handleReset");
-      })
-      .catch((error) => {
-        const event = new ShowToastEvent({
-          title: "Error",
-          variant: "error",
-          message: "error"
-        });
-        this.dispatchEvent(event);
-        // reset contacts var with null
-      })
-      .finally(() => {
-        this.template.querySelector(
-          'lightning-input[data-name="search"]'
-        ).value = "";
-        this.template.querySelector(
-          'lightning-input[data-name="filter"]'
-        ).value = "";
-      });
-      */
+    //     this.allData = JSON.parse(result);
+    //     this.initData = JSON.parse(result);
+    //     this.displayGridLengths("XXXXX after getJSONTree in handleReset");
+
+    //this.isLoaded = false;
+    // getJSONTree({
+    //   searchStr: "reserved"
+    // })
+    //   .then((result) => {
+    //     // set @track contacts variable with return contact list from server
+    //     // this.logit(
+    //     //   FINE,
+    //     //   `handleSearchKeyword(): result=${JSON.stringify(result)}`,
+    //     //   `handleSearchKeyword()`
+    //     // );
+    //     this.gridData = JSON.parse(result);
+    //     this.allData = JSON.parse(result);
+    //     this.initData = JSON.parse(result);
+    //     this.displayGridLengths("XXXXX after getJSONTree in handleReset");
+    //     //this.isloaded = true;
+    //   })
+    //   .catch((error) => {
+    //     const event = new ShowToastEvent({
+    //       title: "Error",
+    //       variant: "error",
+    //       message: error.body.message
+    //     });
+    //     this.dispatchEvent(event);
+    //     // reset contacts var with null
+    //   })
+    //   .finally(() => {
+    //     //this.isLoaded = true;
+    //     this.template.querySelector(
+    //       'lightning-input[data-name="search"]'
+    //     ).value = "";
+    //     this.template.querySelector(
+    //       'lightning-input[data-name="filter"]'
+    //     ).value = "";
+    //   });
   }
 
   displayGridLengths(str) {
