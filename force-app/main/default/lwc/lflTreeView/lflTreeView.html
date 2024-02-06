@@ -51,7 +51,8 @@
               <lightning-input
                 if:true={isLoaded}
                 type="text"
-                placeholder="Type here to Filter the results below"
+                disabled={showfilter}
+                placeholder="Filter (enabled for up to 500 search results)"
                 label="Filter Search Results"
                 data-name="filter"
                 onchange={handleFilterKeyInput}
