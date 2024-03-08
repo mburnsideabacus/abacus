@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>CallHighlightAction</actionName>
@@ -182,7 +182,22 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Abacus_Therapist_Client_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Abacus_Therapist_Client_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
         <type>Default</type>
@@ -222,41 +237,26 @@
     <externalSharingModel>Private</externalSharingModel>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <searchLayouts>
-        <customTabListAdditionalFields
-    >ACCOUNT.NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields
-    >ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
-        <customTabListAdditionalFields
-    >ACCOUNT.PHONE1</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.PHONE1</customTabListAdditionalFields>
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <excludedStandardButtons>NewFromDocument</excludedStandardButtons>
-        <excludedStandardButtons
-    >DataDotComGetAccountsMultiAddAction</excludedStandardButtons>
-        <excludedStandardButtons
-    >DiscoveryGetAccountsAction</excludedStandardButtons>
+        <excludedStandardButtons>DataDotComGetAccountsMultiAddAction</excludedStandardButtons>
+        <excludedStandardButtons>SendBulkMessageAction</excludedStandardButtons>
         <excludedStandardButtons>Import</excludedStandardButtons>
         <excludedStandardButtons>MassCreateCallList</excludedStandardButtons>
-        <excludedStandardButtons>SendBulkMessageAction</excludedStandardButtons>
-        <lookupDialogsAdditionalFields
-    >ACCOUNT.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields
-    >CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields
-    >ACCOUNT.TYPE</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields
-    >ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields
-    >CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields
-    >ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields
-    >ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields
-    >ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields
-    >ACCOUNT.PHONE1</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields
-    >CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <excludedStandardButtons>DiscoveryGetAccountsAction</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.TYPE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
 </CustomObject>
