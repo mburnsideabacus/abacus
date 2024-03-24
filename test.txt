@@ -22,3 +22,7 @@ sd__r.program__r.status__c from objective__c
 where name like '%blue circle%' 
 or sd__r.name like '%blue circle%'
 or sd__r.program__r.name like '%blue circle%'
+
+
+sf project deploy start --metadata "CustomObject:Session_BOC__c" --metadata "ApexTrigger:trgPopulateSessionBOC" --metadata "ApexClass:TestLFLSessionBOCTrg"  --target-org AbacusPROD --test-level RunSpecifiedTests --tests TestLFLSessionBOCTrg
+sf project deploy start --metadata "CustomObject:Client_Objective__c, CustomObject:Client_Objective_TimeSeries__c,CustomObject:TimeSeries_Log__c,CustomObject:Incidental_Data__c,CustomObject:NDIS_Report__c,CustomObject:Objective__c,CustomObject:Program__c,CustomObject:SD__c,CustomObject:Session__c,CustomObject:Session_Obj__c,CustomObject:Session_Statistics__c" -u AbacusDEVPRO
