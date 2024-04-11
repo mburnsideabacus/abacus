@@ -1,0 +1,582 @@
+Name,Stage__c,Status__c,Area__c,SDID__c,PID__c
+trace trace write,Stage Three,Active,School Readiness,ABC-SD-000001,ABC-P-000001
+Imitating,Stage One,Active,Communication,ABC-SD-000002,P-000034
+Choices,Stage One,Active,Communication,ABC-SD-000003,ABC-P-000002
+Make,Stage Three,Active,School Readiness,ABC-SD-000057,P-000122
+Attending to song,Stage One,Active,Learning to Learn,ABC-SD-000004,P-000183
+Do (activity),Stage One,Active,,ABC-SD-000005,P-000086
+With peers,Stage Three,Active,Social Play Skills,ABC-SD-000006,ABC-P-000003
+Waiting for pause,Stage Three,Active,Conversation,ABC-SD-000007,ABC-P-000008
+Single turn with therapist,Stage Two,Active,Social Play Skills,ABC-SD-000008,P-000210
+Tense and relax - with visual,,Active,,ABC-SD-000009,ABC-P-000009
+Breathing - with visual,,Active,,ABC-SD-000010,ABC-P-000009
+Tense and relax - no visual,,Active,,ABC-SD-000011,ABC-P-000009
+Phonics receptive,,Active,,ABC-SD-000012,ABC-P-000004
+reading - expressive,Stage Four,Active,School Readiness,ABC-SD-000013,ABC-P-000004
+1 person,Stage Two,Active,Abstract Concepts,SD-000001,P-000032
+1 step,Stage Two,Active,Imitation,SD-000002,P-000064
+2 items,Stage Two,Active,Receptive Language,SD-000003,P-000022
+2 step rec. instr.,Stage Two,Active,Receptive Language,SD-000004,P-000157
+2 step rec. play instr.,Stage Two,Active,Receptive Language,SD-000005,P-000159
+2 steps,Stage Two,Active,Imitation,SD-000006,P-000064
+2D Receptive,Stage One,Active,Receptive Language,SD-000007,P-000158
+3 step rec. instr.,Stage Three,Active,Receptive Language,SD-000008,P-000157
+3 step rec. play instr.,Stage Three,Active,Receptive Language,SD-000009,P-000159
+3 steps,Stage Two,Active,Imitation,SD-000010,P-000064
+3D Receptive,Stage One,Active,Receptive Language,SD-000011,P-000158
+4 step rec.instr,Stage Three,Active,Receptive Language,SD-000012,P-000157
+Action,Stage Two,Active,Social Play Skills,SD-000013,P-000049
+Action,,Active,,SD-000014,P-000050
+Action w item,Stage Two,Active,Social Play Skills,SD-000015,P-000049
+Action with object,Stage One,Active,Imitation,SD-000016,P-000113
+Actions,Stage Three,Active,Speech,SD-000017,P-000171
+Activities on Day,Stage Three,Active,Abstract Concepts,SD-000018,P-000023
+Activity,Stage Two,Active,Self-Care,SD-000019,P-000045
+Activity,Stage One,Active,Play Skills,SD-000020,P-000048
+Activity,Stage Two,Active,Kinder Readiness,SD-000021,P-000065
+Activity,Stage One,Active,Play Skills,SD-000023,P-000132
+Activity,Stage Two,Active,Play Skills,SD-000024,P-000008
+Activity,Stage One,Active,Play Skills,SD-000025,P-000097
+Activity with distraction,Stage Three,Active,School Readiness,SD-000026,P-000230
+Adjusting vol. due proximity,Stage Four,Active,Conversation,SD-000027,P-000216
+Analogue,Stage Three,Active,Abstract Concepts,SD-000028,P-000199
+Between 2 people,Stage One,Active,Learning to Learn,SD-000029,P-000032
+Book w model,Stage Two,Active,Expressive Language,SD-000030,P-000062
+Book w/o model,Stage Two,Active,Expressive Language,SD-000031,P-000062
+Brainstorm,Stage Four,Active,Abstract Concepts,SD-000032,P-000014
+Brainstorming,Stage Two,Active,Conversation,SD-000033,P-000025
+Brainstorming,Stage Four,Active,Abstract Concepts,SD-000034,P-000035
+Brainstorming,Stage Two,Active,Expressive Language,SD-000035,P-000071
+Brushing teeth,Stage One,Active,Self-Care,SD-000037,P-000207
+Call name,Stage Two,Active,Receptive Language,SD-000038,P-000165
+Category exclusion (expressive),Stage Four,Active,Expressive reasoning,SD-000039,P-000059
+With therapists,Stage Three,Active,Social Play Skills,SD-000040,P-000009
+Change aspect of play,Stage Two,Active,Play Skills,SD-000041,P-000133
+Chart,Stage Three,Active,School Readiness,SD-000042,P-000167
+Child gives clues,Stage Four,Active,Expressive reasoning,SD-000043,P-000087
+Child Guessing,,Active,,SD-000044,P-000087
+Client Preposition,Stage Two,Active,Abstract Concepts,SD-000045,P-000140
+Close ended task,Stage Two,Active,Social Play Skills,SD-000046,P-000210
+Colour,Stage One,Active,Matching,SD-000047,P-000001
+Colour/shape,Stage One,Active,Matching,SD-000048,P-000001
+Colouring,Stage Two,Active,Play Skills,SD-000049,P-000008
+Colours,Stage One,Active,Matching,SD-000050,P-000186
+Comm. opportunity,Stage One,Active,Communication,SD-000051,P-000103
+Comment w gaze,Stage Two,Active,Learning to Learn,SD-000052,P-000102
+Comment w point,Stage Two,Active,Learning to Learn,SD-000053,P-000102
+Independent request,Stage One,Active,Communication,SD-000054,P-000034
+Communication opportunity,Stage One,Active,Communication,SD-000055,P-000128
+Communication opportunity,Stage One,Active,Communication,SD-000056,P-000144
+Communication opportunity,Stage One,Active,Communication,SD-000057,P-000143
+Contextual,Stage Four,Active,Expressive Language,SD-000058,P-000215
+Contextual Instruction,Stage One,Active,,SD-000059,P-000125
+Contingency,Stage Two,Active,Learning to Learn,SD-000060,P-000068
+Count (items),Stage Two,Active,Kinder Readiness,SD-000061,P-000122
+Cutting,Stage Two,Active,Play Skills,SD-000062,P-000008
+Cutting and Pasting Activity,Stage Two,Active,Play Skills,SD-000063,P-000008
+Cutting on line,Stage Two,Active,Play Skills,SD-000064,P-000008
+CV - VI,Stage One,Active,Speech,SD-000065,P-000212
+Daily living task,Stage One,Active,Self-Care,SD-000066,P-000173
+Demonstration,Stage Two,Active,Abstract Concepts,SD-000067,P-000057
+Digital,Stage Three,Active,Abstract Concepts,SD-000068,P-000199
+Do (activity),Stage One,Active,Learning to Learn,SD-000069,P-000196
+Do schedule,Stage Three,Active,School Readiness,SD-000070,P-000214
+Draw,,Active,,SD-000071,P-000052
+Drawing,,Active,,SD-000072,P-000008
+Eat food,,Active,,SD-000073,P-000070
+Emotions Brainstorming,,Active,,SD-000074,P-000040
+Independent play,Stage Two,Active,Play Skills,SD-000075,P-000098
+Engage In Strategy,,Active,,SD-000077,P-000235
+Exp. function,Stage Three,Active,Language,SD-000078,P-000121
+Exp. I/you (what),Stage Three,Active,Abstract Concepts,SD-000079,P-000150
+Exp. I/You (who),Stage Three,Active,Abstract Concepts,SD-000080,P-000150
+Exp. item. prep. loc.,Stage Two,Active,Abstract Concepts,SD-000081,P-000140
+Exp. label,Stage Three,Active,Conversation,SD-000082,P-000090
+Exp. labels PLQ,Stage Two,Active,Expressive Language,SD-000083,P-000142
+Exp. location,Stage Three,Active,Conversation,SD-000084,P-000090
+Exp. My/Your,Stage Three,Active,Abstract Concepts,SD-000085,P-000150
+Exp. non-visual,Stage Four,Active,Abstract Concepts,SD-000086,P-000123
+Exp. our/their,Stage Three,Active,Abstract Concepts,SD-000087,P-000150
+Exp. past tense,Stage Three,Active,Language,SD-000088,P-000126
+Exp. person,Stage Three,Active,Conversation,SD-000089,P-000090
+Exp. prep. location,Stage Two,Active,Abstract Concepts,SD-000090,P-000140
+Exp. We/they/I/You,Stage Three,Active,Abstract Concepts,SD-000091,P-000150
+Exposure,,Active,,SD-000092,P-000057
+EXPOSURE,Stage One,Active,Communication,SD-000093,P-000147
+Exposure,Stage Two,Active,Receptive Language,SD-000094,P-000121
+Exposure,,Active,,SD-000095,P-000227
+Exposure,Stage Two,Active,Abstract Concepts,SD-000096,P-000140
+Exposure,Stage Two,Active,Abstract Concepts,SD-000097,P-000010
+Engage in activity,Stage Two,Active,Social Play Skills,SD-000076,P-000136
+Exposure,Stage Two,Active,Play Skills,SD-000098,P-000011
+Exposure,Stage Three,Active,Social Play Skills,SD-000099,P-000017
+Exposure,Stage Two,Active,Abstract Concepts,SD-000100,P-000025
+Exposure,Stage Two,Active,Play Skills,SD-000101,P-000030
+Exposure,Stage Four,Active,Abstract Concepts,SD-000102,P-000037
+Exposure,Stage Two,Active,Abstract Concepts,SD-000103,P-000038
+Exposure,Stage Three,Active,School Readiness,SD-000104,P-000046
+Exposure,Stage Four,Active,Expressive Language,SD-000105,P-000047
+Exposure,Stage One,Active,Communication,SD-000106,P-000103
+Exposure,Stage Two,Active,Abstract Concepts,SD-000107,P-000123
+Exposure,Stage Two,Active,Social Play Skills,SD-000108,P-000135
+Exposure,Stage One,Active,Communication,SD-000109,P-000177
+Exposure,Stage One,Active,Play Skills,SD-000110,P-000184
+Exposure,Stage One,Active,Self-Care,SD-000111,P-000207
+Exposure,Stage Three,Active,School Readiness,SD-000112,P-000211
+Exposure,Stage Three,Active,,SD-000113,P-000213
+Exposure,Stage One,Active,Speech,SD-000114,P-000124
+Exposure,Stage Two,Active,Speech,SD-000115,P-000007
+Exposure,Stage Two,Active,Abstract Concepts,SD-000116,P-000014
+Exposure,Stage One,Active,Receptive Language,SD-000117,P-000107
+Exposure,Stage One,Active,Receptive Language,SD-000118,P-000060
+Exposure,Stage One,Active,Learning to Learn,SD-000119,P-000195
+Expressive,Stage Two,Active,Expressive Language,SD-000120,P-000130
+Expressive,,Active,,SD-000121,P-000028
+Expressive,Stage Two,Active,Expressive Language,SD-000122,P-000004
+Expressive,Stage Three,Active,Abstract Concepts,SD-000123,P-000010
+Expressive,Stage Two,Active,Expressive Language,SD-000124,P-000018
+Expressive,Stage Two,Active,Expressive Language,SD-000125,P-000019
+Expressive,Stage Three,Active,Abstract Concepts,SD-000126,P-000023
+Expressive,Stage Two,Active,Abstract Concepts,SD-000127,P-000029
+Expressive,Stage Two,Active,Abstract Concepts,SD-000128,P-000031
+Expressive,Stage Four,Active,Abstract Concepts,SD-000129,P-000035
+Expressive,Stage Four,Active,Abstract Concepts,SD-000130,P-000037
+Expressive,Stage Two,Active,Expressive Language,SD-000131,P-000038
+Expressive,Stage Three,Active,School Readiness,SD-000132,P-000046
+Expressive,Stage Two,Active,Abstract Concepts,SD-000133,P-000057
+Expressive,Stage Three,Active,Expressive Language,SD-000134,P-000059
+Expressive,Stage Two,Active,Expressive Language,SD-000135,P-000061
+Expressive,Stage Three,Active,Expressive Language,SD-000136,P-000069
+Expressive,Stage Two,Active,Expressive Language,SD-000137,P-000071
+Expressive,Stage Three,Active,School Readiness,SD-000138,P-000106
+Expressive,Stage Two,Active,Expressive Language,SD-000139,P-000107
+Expressive,Stage Three,Active,School Readiness,SD-000140,P-000109
+Expressive,Stage Three,Active,School Readiness,SD-000141,P-000117
+Expressive,Stage Three,Active,Language,SD-000142,P-000121
+Expressive,Stage Two,Active,Abstract Concepts,SD-000143,P-000123
+Expressive,Stage Two,Active,Expressive Language,SD-000144,P-000129
+Expressive,Stage Three,Active,School Readiness,SD-000145,P-000131
+Expressive,Stage Three,Active,Abstract Concepts,SD-000146,P-000137
+Expressive,Stage Three,Active,Abstract Concepts,SD-000147,P-000170
+Expressive,,Active,,SD-000148,P-000175
+Expressive,Stage Three,Active,School Readiness,SD-000152,P-000225
+Expressive,Stage Two,Active,Abstract Concepts,SD-000149,P-000176
+Expressive,Stage Three,Active,Abstract Concepts,SD-000150,P-000222
+Expressive,Stage Four,Active,Abstract Concepts,SD-000151,P-000224
+Expressive,Stage Three,Active,Language,SD-000153,P-000226
+Expressive,Stage Three,Active,School Readiness,SD-000154,P-000229
+Expressive,Stage Two,Active,Expressive Language,SD-000155,P-000072
+Expressive,Stage Two,Active,Expressive Language,SD-000156,P-000104
+Expressive - Intra-verbal,Stage Two,Active,Expressive Language,SD-000157,P-000025
+Expressive - Tell me,Stage Two,Active,Conversation,SD-000158,P-000025
+Expressive - What is,Stage Two,Active,Expressive Language,SD-000159,P-000025
+Expressive (Animal says...),Stage Two,Active,Play Skills,SD-000160,P-000006
+Expressive 3rd person,Stage Two,Active,Expressive Language,SD-000161,P-000004
+Expressive After,Stage Three,Active,Abstract Concepts,SD-000162,P-000013
+Expressive Before,Stage Three,Active,Abstract Concepts,SD-000163,P-000013
+Expressive feel,Stage Two,Active,Expressive Language,SD-000164,P-000174
+Expressive Function,Stage Two,Active,Expressive Language,SD-000165,P-000107
+Expressive hear,Stage Two,Active,Expressive Language,SD-000166,P-000174
+Expressive Imitation,Stage Three,Active,Expressive Language,SD-000167,P-000069
+Expressive Occupation Location,Stage Three,Active,Language,SD-000168,P-000107
+Expressive Person/Action,Stage Two,Active,Expressive Language,SD-000169,P-000004
+Expressive Q/A,Stage Two,Active,Play Skills,SD-000170,P-000006
+Expressive reason,Stage Four,Active,Expressive reasoning,SD-000171,P-000059
+Expressive reverse,Stage Three,Active,School Readiness,SD-000172,P-000225
+Expressive senses,Stage Two,Active,Expressive Language,SD-000173,P-000174
+Expressive taste,Stage Two,Active,Expressive Language,SD-000174,P-000174
+Expressive visual only,Stage Two,Active,Expressive Language,SD-000175,P-000061
+Expressive w/ objects,Stage Two,Active,Conversation,SD-000176,P-000026
+Expressive/Receptive,Stage Two,Active,Conversation,SD-000177,P-000026
+Factual,Stage Two,Active,Expressive Language,SD-000178,P-000233
+Food presentation,Stage Two,Active,Self-Care,SD-000179,P-000056
+From model,Stage Two,Active,Play Skills,SD-000180,P-000053
+From Play,Stage One,Active,Learning to Learn,SD-000181,P-000032
+Future,Stage Four,Active,Expressive Language,SD-000182,P-000197
+Game,Stage Three,Active,Social Play Skills,SD-000183,P-000017
+Gaze,Stage Two,Active,Learning to Learn,SD-000184,P-000102
+Generalised,Stage One,Active,Learning to Learn,SD-000185,P-000151
+Generalised,Stage Three,Active,Conversation,SD-000186,P-000090
+Generalised,Stage One,Active,Matching,SD-000187,P-000186
+Generalised,Stage One,Active,Learning to Learn,SD-000188,P-000032
+Generalised SD,Stage Two,Active,Kinder Readiness,SD-000189,P-000073
+Attending,Stage One,Active,Communication,SD-000190,P-000034
+Getting dressed,Stage Two,Active,Self-Care,SD-000191,P-000077
+Give me (number) (item),Stage Two,Active,Kinder Readiness,SD-000192,P-000122
+Go Ask,Stage Three,Active,Conversation,SD-000193,P-000075
+Go give,Stage Three,Active,Conversation,SD-000194,P-000075
+Go show,Stage Three,Active,Conversation,SD-000195,P-000075
+Go tell,Stage Three,Active,Conversation,SD-000196,P-000075
+Go to,Stage Two,Active,Play Skills,SD-000197,P-000188
+Go To,Stage One,Active,Receptive Language,SD-000198,P-000084
+Go to holding item,Stage Two,Active,Play Skills,SD-000201,P-000188
+Helmet tolerance,Stage Two,Active,Play Skills,SD-000202,P-000168
+Hidden Item,Stage Four,Active,Expressive reasoning,SD-000203,P-000198
+Holding hands,Stage Two,Active,Community Access,SD-000204,P-000219
+Holding hands tolerance,Stage Two,Active,Community Access,SD-000205,P-000219
+How many (items)?,Stage Two,Active,Kinder Readiness,SD-000206,P-000122
+How they feel,Stage Three,Active,Abstract Concepts,SD-000207,P-000040
+How to help,Stage Four,Active,Abstract Concepts,SD-000208,P-000040
+I have,Stage Three,Active,Conversation,SD-000209,P-000160
+Identical,Stage One,Active,Matching,SD-000210,P-000001
+Identical,Stage One,Active,Matching,SD-000211,P-000002
+Identical,Stage One,Active,Matching,SD-000212,P-000003
+Identical,Stage One,Active,Matching,SD-000213,P-000186
+Identical Receptive,Stage Two,Active,Abstract Concepts,SD-000214,P-000123
+If/then,Stage Three,Active,Receptive Language,SD-000215,P-000094
+Imaginary Play,Stage Three,Active,Social Play Skills,SD-000216,P-000141
+Imitation,Stage Two,Active,Play Skills,SD-000217,P-000011
+Imitation,Stage One,Active,Play Skills,SD-000218,P-000016
+Imitation,Stage Two,Active,Play Skills,SD-000219,P-000030
+Imitation,Stage Two,Active,Play Skills,SD-000220,P-000053
+Imitation,Stage One,Active,Speech,SD-000222,P-000124
+Imitation,Stage Two,Active,Social Play Skills,SD-000223,P-000135
+Imitation,Stage Three,Active,,SD-000224,P-000213
+In Sight,Stage One,Active,,SD-000225,P-000093
+In view,Stage One,Active,Receptive Language,SD-000226,P-000187
+In Vivo,Stage Two,Active,Receptive Language,SD-000227,P-000022
+Instruction,Stage One,Active,Learning to Learn,SD-000228,P-000033
+Instruction,Stage Four,Active,Expressive Language,SD-000229,P-000047
+Instruction,Stage Three,Active,Receptive Language,SD-000230,P-000051
+Instruction,Stage Two,Active,Self-Care,SD-000231,P-000055
+Instruction w condition,Stage Two,Active,Receptive Language,SD-000233,P-000039
+Instruction w contextual cue,Stage One,Active,Receptive Language,SD-000234,P-000041
+Instruction with gesture,Stage Three,Active,Receptive Language,SD-000235,P-000051
+Instructional gesture,Stage Three,Active,Receptive Language,SD-000236,P-000074
+Intraverbal,Stage Two,Active,Expressive Language,SD-000237,P-000185
+Item,Stage One,Active,Receptive Language,SD-000238,P-000022
+Item,Stage One,Active,Receptive Language,SD-000239,P-000081
+Item for person not attending,Stage Two,Active,Conversation,SD-000240,P-000076
+item removed,Stage Three,Active,Abstract Concepts,SD-000241,P-000223
+Item with visual,Stage One,Active,Receptive Language,SD-000242,P-000022
+Labels exposure,Stage One,Active,Receptive Language,SD-000243,P-000146
+Language exposure,Stage Two,Active,Receptive Language,SD-000244,P-000054
+Less preferred item,Stage Two,Active,Social Play Skills,SD-000245,P-000210
+List,Stage Four,Active,Abstract Concepts,SD-000246,P-000027
+List Numbers,Stage Four,Active,Expressive Language,SD-000247,P-000156
+List words,Stage Four,Active,Expressive Language,SD-000248,P-000156
+Location,Stage One,Active,Receptive Language,SD-000249,P-000081
+Losing,,Active,,SD-000250,P-000205
+Mand,Stage One,Active,Communication,SD-000251,P-000185
+Mand,Stage One,Active,Communication,SD-000252,P-000020
+Mat time,Stage Two,Active,Kinder Readiness,SD-000253,P-000111
+Matching,Stage Three,Active,Abstract Concepts,SD-000254,P-000023
+Matching,Stage Two,Active,Abstract Concepts,SD-000255,P-000025
+Matching,Stage One,Active,Matching,SD-000256,P-000029
+Matching,Stage One,Active,Matching,SD-000257,P-000031
+Matching,Stage Two,Active,Abstract Concepts,SD-000258,P-000057
+Matching,Stage Two,Active,Kinder Readiness,SD-000259,P-000106
+Matching,Stage Three,Active,School Readiness,SD-000260,P-000109
+Matching,Stage Two,Active,Kinder Readiness,SD-000261,P-000117
+Matching,Stage Three,Active,School Readiness,SD-000262,P-000120
+Matching,Stage One,Active,Matching,SD-000263,P-000129
+Matching,Stage One,Active,Matching,SD-000264,P-000176
+Matching,Stage One,Active,Matching,SD-000265,P-000208
+Matching,Stage Three,Active,School Readiness,SD-000266,P-000228
+Matching,Stage Three,Active,School Readiness,SD-000267,P-000229
+Matching,Stage One,Active,Matching,SD-000268,P-000005
+Matching,,Active,,SD-000269,P-000018
+Matching different cases,Stage Three,Active,School Readiness,SD-000270,P-000106
+Meal,,Active,,SD-000271,P-000178
+missing component,Stage Three,Active,Abstract Concepts,SD-000272,P-000223
+missing component w/ visual,,Active,,SD-000273,P-000223
+Missing item,Stage Two,Active,,SD-000274,P-000172
+Model,Stage One,Active,Communication,SD-000275,P-000034
+Model,Stage Three,Active,Self-Care,SD-000276,P-000164
+Model language,Stage One,Active,Receptive Language,SD-000277,P-000104
+Model rule,Stage Three,Active,Abstract Concepts,SD-000278,P-000181
+Model sentence,Stage Three,Active,Language,SD-000279,P-000104
+Moderately preferred item,Stage Two,Active,Social Play Skills,SD-000280,P-000210
+Move back,Stage Two,Active,Receptive Language,SD-000281,P-000112
+Next,,Active,,SD-000282,P-000139
+No item,Stage One,Active,Learning to Learn,SD-000283,P-000151
+Non visual,Stage Two,Active,Conversation,SD-000284,P-000026
+Non-ID quantity matching,Stage Three,Active,School Readiness,SD-000285,P-000153
+Non-Identical,Stage One,Active,Matching,SD-000286,P-000001
+Non-identical,Stage One,Active,Matching,SD-000287,P-000002
+Non-identical,Stage One,Active,Matching,SD-000288,P-000003
+Non-Identical,Stage One,Active,Matching,SD-000289,P-000186
+Receptive (opposite) (item),Stage Two,Active,Abstract Concepts,SD-000290,P-000123
+Not holding hands,Stage Two,Active,Community Access,SD-000291,P-000219
+Open ended task,Stage Two,Active,Social Play Skills,SD-000292,P-000210
+Out of sight,,Active,,SD-000293,P-000093
+Out of sight,Stage One,Active,Receptive Language,SD-000294,P-000187
+Painting,Stage Two,Active,Play Skills,SD-000295,P-000008
+Parent leaves (inside),Stage One,Active,Learning to Learn,SD-000296,P-000206
+Parents leave (outside),Stage One,Active,Learning to Learn,SD-000297,P-000206
+Passage from book,Stage Four,Active,Expressive Language,SD-000298,P-000156
+Past,Stage Three,Active,Language,SD-000299,P-000197
+Pasting,Stage Two,Active,Play Skills,SD-000300,P-000008
+Person,Stage One,Active,Receptive Language,SD-000301,P-000081
+Person facing away,Stage Two,Active,Conversation,SD-000302,P-000076
+Person not attending,Stage Two,Active,Conversation,SD-000303,P-000076
+Pictures,Stage Two,Active,Conversation,SD-000304,P-000026
+Place in finished box,Stage One,Active,Learning to Learn,SD-000305,P-000066
+Planned model,Stage Two,Active,Imitation,SD-000306,P-000138
+Imitation,Stage One,Active,Imitation,SD-000307,P-000113
+Imitation,Stage One,Active,Imitation,SD-000308,P-000119
+Planned model with toy,Stage Two,Active,Imitation,SD-000311,P-000134
+Play scenario,Stage Three,Active,Social Play Skills,SD-000312,P-000095
+Play situation,Stage Three,Active,Social Play Skills,SD-000313,P-000101
+PLQ Intraverbal,Stage Two,Active,Expressive Language,SD-000314,P-000185
+PLQ Mand,Stage Two,Active,Expressive Language,SD-000315,P-000004
+PLQ Mand,Stage One,Active,Communication,SD-000316,P-000185
+Point,Stage Two,Active,Learning to Learn,SD-000317,P-000102
+Point in direction,Stage Two,Active,Learning to Learn,SD-000318,P-000102
+Prebuilt 2D,Stage One,Active,Play Skills,SD-000319,P-000016
+Prebuilt 3D,Stage One,Active,Play Skills,SD-000320,P-000016
+Preferred item,,Active,,SD-000321,P-000210
+Present,Stage Two,Active,Expressive Language,SD-000322,P-000197
+Co-operative play with therapist,Stage Two,Active,Play Skills,SD-000323,P-000098
+Present iPad,Stage Two,Active,Play Skills,SD-000324,P-000100
+Present item,Stage Two,Active,Expressive Language,SD-000325,P-000190
+Pretend to be,Stage Two,Active,Play Skills,SD-000326,P-000141
+Pretend with item,Stage Two,Active,Play Skills,SD-000327,P-000141
+Program stimuli,Stage One,Active,Learning to Learn,SD-000328,P-000151
+Proloquo,Stage Two,Active,Conversation,SD-000329,P-000026
+Put it down,Stage One,Active,Receptive Language,SD-000330,P-000152
+Put with same/different,Stage Three,Active,Abstract Concepts,SD-000331,P-000170
+Q/A,Stage Four,Active,Abstract Concepts,SD-000332,P-000027
+Q/A,Stage Three,Active,School Readiness,SD-000333,P-000046
+Q/A,Stage Three,Active,Receptive Language,SD-000334,P-000074
+Q/A,Stage Three,Active,Language,SD-000335,P-000091
+Q/A,Stage Three,Active,Language,SD-000336,P-000092
+Q/A,Stage Four,Active,Expressive Language,SD-000337,P-000110
+Q/A,Stage Four,Active,Expressive reasoning,SD-000338,P-000169
+Q/A,Stage Two,Active,Conversation,SD-000339,P-000180
+Q/A,Stage Three,Active,Abstract Concepts,SD-000340,P-000014
+Q/A w clause,Stage Four,Active,Abstract Concepts,SD-000341,P-000027
+Quantity to numeral matching,Stage Three,Active,School Readiness,SD-000342,P-000153
+Question,Stage Four,Active,Expressive Language,SD-000343,P-000047
+Question,Stage Four,Active,Conversation,SD-000344,P-000075
+Question,Stage Four,Active,Expressive reasoning,SD-000345,P-000198
+Question,Stage Three,Active,Conversation,SD-000346,P-000043
+Question discrimination,Stage Three,Active,Expressive Language,SD-000347,P-000069
+Question with visual,Stage Two,Active,Conversation,SD-000348,P-000233
+Question without visual,Stage Two,Active,Conversation,SD-000349,P-000233
+Questions,Stage Three,Active,Speech,SD-000350,P-000171
+Rec. instr.,Stage Three,Active,Language,SD-000351,P-000096
+Rec. Instr.,Stage One,Active,Receptive Language,SD-000352,P-000157
+Rec. item prep. loc.,Stage Two,Active,Abstract Concepts,SD-000353,P-000140
+Rec. My/Your,Stage Three,Active,Abstract Concepts,SD-000354,P-000150
+Rec. our/their,Stage Three,Active,Abstract Concepts,SD-000355,P-000150
+Rec. play instr.,Stage One,Active,Receptive Language,SD-000356,P-000159
+Rec. play instr.,Stage One,Active,Learning to Learn,SD-000357,P-000162
+Rec. prep. location,Stage Two,Active,Abstract Concepts,SD-000358,P-000140
+Receptive,Stage One,Active,Receptive Language,SD-000359,P-000004
+Receptive,Stage Three,Active,Abstract Concepts,SD-000360,P-000010
+Receptive,Stage Two,Active,Play Skills,SD-000361,P-000011
+Receptive,Stage One,Active,Receptive Language,SD-000362,P-000018
+Receptive,Stage One,Active,Receptive Language,SD-000363,P-000019
+Receptive,Stage Three,Active,Abstract Concepts,SD-000364,P-000023
+Receptive,Stage Two,Active,Receptive Language,SD-000365,P-000025
+Receptive,Stage Two,Active,Abstract Concepts,SD-000366,P-000029
+Receptive,Stage Two,Active,Play Skills,SD-000367,P-000030
+Receptive,Stage Two,Active,Abstract Concepts,SD-000368,P-000031
+Receptive,Stage Four,Active,Abstract Concepts,SD-000369,P-000035
+Receptive,Stage Three,Active,Receptive Language,SD-000370,P-000036
+Receptive,Stage Two,Active,Receptive Language,SD-000371,P-000038
+Receptive,Stage Two,Active,Receptive Language,SD-000372,P-000042
+Receptive,Stage Three,Active,School Readiness,SD-000373,P-000046
+Receptive,Stage Two,Active,Play Skills,SD-000374,P-000053
+Receptive,Stage Two,Active,Abstract Concepts,SD-000375,P-000057
+Receptive,Stage Three,Active,Receptive Language,SD-000376,P-000059
+Receptive,Stage Three,Active,School Readiness,SD-000377,P-000063
+Receptive,Stage One,Active,Receptive Language,SD-000378,P-000071
+Receptive,Stage Three,Active,Receptive Language,SD-000379,P-000074
+Receptive,Stage Three,Active,School Readiness,SD-000380,P-000106
+Receptive,Stage One,Active,Receptive Language,SD-000381,P-000107
+Receptive,Stage Three,Active,School Readiness,SD-000382,P-000109
+Receptive,Stage Three,Active,School Readiness,SD-000383,P-000117
+Receptive,Stage Three,Active,School Readiness,SD-000384,P-000118
+Receptive,Stage Three,Active,Language,SD-000385,P-000121
+Receptive,Stage One,Active,Receptive Language,SD-000386,P-000129
+Receptive,Stage Three,Active,School Readiness,SD-000387,P-000131
+Receptive,Stage Three,Active,Abstract Concepts,SD-000388,P-000137
+Receptive,Stage Two,Active,Abstract Concepts,SD-000389,P-000140
+Receptive,Stage Three,Active,Abstract Concepts,SD-000390,P-000170
+Receptive,Stage Two,Active,Abstract Concepts,SD-000391,P-000176
+Receptive,Stage Three,Active,School Readiness,SD-000392,P-000229
+Receptive,Stage Two,Active,Play Skills,SD-000393,P-000006
+Receptive,Stage Two,Active,Receptive Language,SD-000394,P-000028
+Receptive,Stage Two,Active,Receptive Language,SD-000395,P-000130
+Receptive,Stage Two,Active,Receptive Language,SD-000396,P-000072
+Receptive,Stage Three,Active,Receptive Language,SD-000397,P-000089
+Receptive After,Stage Three,Active,Abstract Concepts,SD-000398,P-000013
+Receptive Before,Stage Three,Active,Abstract Concepts,SD-000399,P-000013
+Receptive Function,Stage Two,Active,Receptive Language,SD-000400,P-000107
+Receptive Instruction,Stage One,Active,Play Skills,SD-000401,P-000016
+Receptive Person/action,Stage One,Active,Receptive Language,SD-000402,P-000004
+Receptive Q/A,Stage Two,Active,Play Skills,SD-000403,P-000006
+Receptive w/ objects,Stage Two,Active,Conversation,SD-000404,P-000026
+Receptive/expressive,Stage Two,Active,Receptive Language,SD-000405,P-000129
+go ask (question),Stage Three,Active,Conversation,ABC-SD-000014,ABC-P-000011
+Expressive body parts,Stage Four,Active,Abstract Concepts,ABC-SD-000015,ABC-P-000005
+Public vs private body parts,Stage Four,Active,Abstract Concepts,ABC-SD-000016,ABC-P-000005
+go ask statement,Stage Three,Active,Conversation,ABC-SD-000017,ABC-P-000011
+Receptive body parts,Stage Four,Active,Abstract Concepts,ABC-SD-000018,ABC-P-000005
+go tell question,Stage Three,Active,Conversation,ABC-SD-000019,ABC-P-000011
+go tell statement,Stage Three,Active,Conversation,ABC-SD-000020,ABC-P-000011
+subtraction,Stage Three,Active,School Readiness,ABC-SD-000021,P-000118
+with visual,Stage Four,Active,School Readiness,ABC-SD-000022,ABC-P-000006
+Volume thermometer,Stage Four,Active,Conversation,ABC-SD-000023,P-000216
+without visual,Stage Four,Active,School Readiness,ABC-SD-000024,ABC-P-000006
+division,Stage Four,Active,School Readiness,ABC-SD-000025,P-000118
+Skip counting,,Active,,ABC-SD-000026,P-000118
+Brushing teeth (no paste),,Active,,ABC-SD-000056,P-000207
+tracing,Stage Three,Active,School Readiness,ABC-SD-000027,ABC-P-000001
+write,Stage Three,Active,School Readiness,ABC-SD-000028,ABC-P-000001
+Receptive,Stage Four,Active,School Readiness,ABC-SD-000058,ABC-P-000015
+with peers,Stage Four,Active,School Readiness,ABC-SD-000059,ABC-P-000014
+Activity,Stage Two,Active,Play Skills,SD-000022,P-000086
+Go to and Action,Stage Two,Active,Receptive Language,SD-000199,P-000082
+Break requests,,Active,,ABC-SD-000029,P-000021
+With therapist,Stage Three,Active,Social Play Skills,ABC-SD-000030,ABC-P-000003
+Single turn - with peers,Stage Two,Active,Social Play Skills,ABC-SD-000031,P-000210
+Multiple turns - with therapists,Stage Two,Active,Social Play Skills,ABC-SD-000032,P-000210
+With peers,Stage Three,Active,Social Play Skills,ABC-SD-000033,P-000009
+Go ask,Stage Three,Active,Conversation,ABC-SD-000035,ABC-P-000008
+Go tell,Stage Three,Active,Conversation,ABC-SD-000036,ABC-P-000008
+Mindfulness activity,,Active,,ABC-SD-000037,ABC-P-000009
+Multiple turns - with peers,Stage Two,Active,Social Play Skills,ABC-SD-000038,P-000210
+Category sorting,,Active,,ABC-SD-000040,P-000186
+reading - receptive,Stage Four,Active,School Readiness,ABC-SD-000043,ABC-P-000004
+Exposure,Stage Three,Active,Self-Care,ABC-SD-000044,P-000235
+Sorting,Stage Four,Active,Abstract Concepts,ABC-SD-000045,ABC-P-000010
+Reinforcing item,Stage One,Active,Learning to Learn,SD-000412,P-000151
+Imitation,Stage Two,Active,Self-Care,SD-000221,P-000070
+Instruction,Stage Two,Active,Receptive Language,SD-000232,P-000079
+Go to and bring me,Stage Two,Active,Receptive Language,SD-000200,P-000083
+Give (item) to (person),Stage Three,Active,Conversation,ABC-SD-000034,ABC-P-000008
+Breathing - no visual,,Active,,ABC-SD-000039,ABC-P-000009
+Shape sorting,,Active,,ABC-SD-000041,P-000186
+Phonics expressive,,Active,,ABC-SD-000042,ABC-P-000004
+Receptive/expressive,Stage Two,Active,Expressive Language,SD-000406,P-000071
+Reciprocal,,Active,,SD-000407,P-000171
+Reciprocal,Stage Two,Active,Conversation,SD-000408,P-000085
+Reciprocal,Stage Three,Active,Language,SD-000409,P-000091
+Reciprocal,Stage Three,Active,Language,SD-000410,P-000092
+Reciprocal,Stage Three,Active,Conversation,SD-000411,P-000180
+rest time,Stage Two,Active,Receptive Language,SD-000413,P-000166
+Reverse exp. function,Stage Three,Active,Language,SD-000414,P-000121
+Reverse why/because,Stage Three,Active,Language,SD-000415,P-000227
+Ride Bike,Stage Two,Active,Play Skills,SD-000416,P-000015
+Ride bike,Stage Two,Active,Play Skills,SD-000417,P-000168
+Role play,Stage Four,Active,Expressive reasoning,SD-000418,P-000169
+Role projection,Stage Four,Active,Expressive reasoning,SD-000419,P-000182
+Room,Stage One,Active,Receptive Language,SD-000420,P-000081
+Safe Throwing Activity,Stage One,Active,Receptive Language,SD-000421,P-000152
+Sampling,Stage One,Active,Learning to Learn,SD-000422,P-000163
+Say,,Active,,SD-000423,P-000050
+Say (sound) th points,Stage Two,Active,Speech,SD-000424,P-000115
+Say it loudly/quietly,Stage Four,Active,Conversation,SD-000425,P-000216
+Scale,Stage Four,Active,Abstract Concepts,SD-000426,P-000024
+Scenario,Stage Four,Active,Abstract Concepts,SD-000427,P-000024
+Sequence,Stage Two,Active,Kinder Readiness,SD-000429,P-000116
+Sequence,Stage Three,Active,School Readiness,SD-000430,P-000127
+Sequence,Stage Three,Active,Language,SD-000431,P-000175
+Sequence Letters,Stage Three,Active,School Readiness,SD-000432,P-000189
+Sequencing,Stage Three,Active,School Readiness,SD-000433,P-000046
+Sequencing,Stage Three,Active,Abstract Concepts,SD-000434,P-000023
+Shape,Stage One,Active,Matching,SD-000435,P-000001
+Show items/pictures,Stage Four,Active,Expressive Language,SD-000436,P-000156
+Signicant activity,Stage Four,Active,Expressive Language,SD-000437,P-000156
+Single sound VI,Stage One,Active,Speech,SD-000438,P-000212
+Snack,Stage One,Active,Learning to Learn,SD-000439,P-000178
+Social game,Stage Three,Active,Social Play Skills,SD-000440,P-000179
+Social question,Stage Three,Active,Conversation,SD-000441,P-000090
+Song exposure,Stage One,Active,Play Skills,SD-000442,P-000184
+Song with imitation,Stage One,Active,Imitation,SD-000443,P-000183
+Sorting,Stage Two,Active,Abstract Concepts,SD-000444,P-000025
+Sound paired w gesture,Stage Two,Active,Speech,SD-000445,P-000044
+Stamping,Stage Two,Active,Play Skills,SD-000446,P-000008
+Statement,Stage Three,Active,Conversation,SD-000447,P-000043
+Statement,Stage Four,Active,Expressive Language,SD-000448,P-000047
+Statement,Stage Three,Active,Conversation,SD-000449,P-000160
+Sequence,Stage Three,Active,School Readiness,SD-000428,P-000105
+Statement,Stage Three,Active,Conversation,SD-000450,P-000191
+Statement,Stage Three,Active,Abstract Concepts,SD-000451,P-000014
+Statement in play,Stage Three,Active,Conversation,SD-000452,P-000160
+Stay,Stage Two,Active,Community Access,SD-000453,P-000219
+Stop,Stage Three,Active,Social Play Skills,SD-000454,P-000193
+Sustained sound,Stage Two,Active,Speech,SD-000455,P-000212
+Synonym,Stage Four,Active,Expressive Language,SD-000456,P-000215
+Ta,Stage One,Active,Receptive Language,SD-000457,P-000041
+Ta,Stage One,Active,Learning to Learn,SD-000458,P-000194
+TA's turn,Stage Two,Active,Learning to Learn,SD-000459,P-000155
+Tell me how to,Stage Four,Active,Expressive Language,SD-000460,P-000080
+TH gives clues,Stage Four,Active,Expressive reasoning,SD-000461,P-000087
+Third person planned model,Stage Two,Active,Social Play Skills,SD-000462,P-000113
+Third person unplanned model,Stage Two,Active,Social Play Skills,SD-000463,P-000113
+Toilet routine,Stage Two,Active,Self-Care,SD-000464,P-000201
+Toileting,Stage Two,Active,Self-Care,SD-000465,P-000203
+Token board,Stage Three,Active,School Readiness,SD-000466,P-000204
+Tolerance,,Active,,SD-000467,P-000192
+Tolerance,Stage One,Active,Learning to Learn,SD-000471,P-000200
+Tolerance,,Active,,SD-000468,P-000173
+Tolerance,Stage Two,Active,Self-Care,SD-000469,P-000202
+Tolerance,Stage Two,Active,Self-Care,SD-000470,P-000012
+Tolerance,Stage One,Active,Self-Care,SD-000472,P-000221
+Tolerance,Stage Two,Active,Self-Care,SD-000473,P-000088
+Tolerance to Item,Stage One,Active,Learning to Learn,SD-000474,P-000205
+Tolerance to Music,Stage One,Active,Learning to Learn,SD-000475,P-000205
+Toothbrush benign location,Stage One,Active,Self-Care,SD-000476,P-000207
+Toothbrush to lips,Stage One,Active,Self-Care,SD-000477,P-000207
+Toothbrush to teeth,Stage One,Active,Self-Care,SD-000478,P-000207
+Trace,Stage Two,Active,Kinder Readiness,SD-000479,P-000209
+Tracing,Stage Two,Active,Kinder Readiness,SD-000480,P-000008
+Turn taking,Stage Two,Active,Social Play Skills,SD-000481,P-000210
+Type,Stage Three,Active,School Readiness,SD-000482,P-000211
+Unplanned model with toy,Stage Two,Active,Imitation,SD-000483,P-000134
+VC - VI,Stage One,Active,Speech,SD-000484,P-000212
+Verbal,Stage One,Active,Learning to Learn,SD-000485,P-000114
+Verbal Imitation,Stage Two,Active,Imitation,SD-000486,P-000061
+VI,Stage One,Active,Speech,SD-000487,P-000212
+VI - sentence intonation,Stage Three,Active,Speech,SD-000488,P-000212
+VI intonation,Stage Three,Active,Speech,SD-000489,P-000099
+VI intonation - sentence,Stage Three,Active,Speech,SD-000490,P-000099
+Visual,Stage Two,Active,Expressive Language,SD-000491,P-000148
+Visual,Stage Two,Active,Expressive Language,SD-000492,P-000062
+Visual,Stage One,Active,Matching,SD-000493,P-000078
+Visual,Stage One,Active,Learning to Learn,SD-000494,P-000114
+Visual,,Active,,SD-000495,P-000067
+Visual,,Active,,SD-000496,P-000145
+Visual - 2D,Stage Two,Active,Expressive Language,SD-000497,P-000062
+Visual - 3D,Stage Two,Active,Expressive Language,SD-000498,P-000062
+Visual and Verbal,Stage Three,Active,School Readiness,SD-000499,P-000058
+Visual and Verbal,Stage One,Active,Learning to Learn,SD-000500,P-000114
+Visual cue,Stage Three,Active,School Readiness,SD-000501,P-000161
+Visual exchange,Stage One,Active,Communication,SD-000502,P-000034
+Volume,,Active,,SD-000503,P-000149
+Volume,Stage Three,Active,Speech,SD-000504,P-000212
+Wait w visual,Stage One,Active,Learning to Learn,SD-000505,P-000217
+Wait w/o visual,Stage Two,Active,Learning to Learn,SD-000506,P-000217
+Walk properly,Stage Two,Active,Community Access,SD-000507,P-000218
+Wash hands,Stage One,Active,Self-Care,SD-000508,P-000220
+Where did you go?,Stage Three,Active,Language,SD-000509,P-000084
+Why,Stage Three,Active,Expressive Language,SD-000510,P-000040
+Why don't/because,Stage Three,Active,Language,SD-000511,P-000227
+Why not,Stage Three,Active,Abstract Concepts,SD-000512,P-000222
+Why/because,Stage Three,Active,Language,SD-000513,P-000096
+Why/because,Stage Three,Active,Language,SD-000514,P-000227
+With gesture,Stage Three,Active,Receptive Language,SD-000515,P-000154
+With visual,Stage Three,Active,Receptive Language,SD-000516,P-000154
+Without Items,,Active,,SD-000517,P-000141
+Words - VI,Stage Two,Active,Speech,SD-000518,P-000212
+Worksheet,Stage Three,Active,School Readiness,SD-000519,P-000231
+Write (no visual),Stage Four,Active,School Readiness,SD-000520,P-000232
+Write (with visual),Stage Three,Active,School Readiness,SD-000521,P-000232
+Writing/Typing,Stage Four,Active,School Readiness,SD-000522,P-000189
+Written Word,Stage One,Active,Receptive Language,SD-000523,P-000022
+You be the teacher,Stage Three,Active,Conversation,SD-000524,P-000234
+Zones of regulation visual,Stage Three,Active,Self-Care,SD-000525,P-000235
+receptive,Stage Three,Active,Language,ABC-SD-000046,ABC-P-000007
+expressive,Stage Three,Active,Language,ABC-SD-000047,ABC-P-000007
+addition,Stage Three,Active,School Readiness,ABC-SD-000048,P-000118
+multiplication,Stage Four,Active,School Readiness,ABC-SD-000049,P-000118
+For work,Stage One,Active,Learning to Learn,ABC-SD-000050,P-000033
+For play,Stage One,Active,Learning to Learn,ABC-SD-000051,P-000033
+Body check exposure,Stage Four,Active,Abstract Concepts,ABC-SD-000052,ABC-P-000012
+Tell me how to build a block structure,Stage Four,Active,Expressive Language,ABC-SD-000053,P-000080
+How do you feel/what do you need?,Stage Four,Active,Abstract Concepts,ABC-SD-000054,ABC-P-000012
+Independent requests,Stage Two,Active,Expressive Language,ABC-SD-000055,ABC-P-000013
