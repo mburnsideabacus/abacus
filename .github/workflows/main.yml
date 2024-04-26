@@ -1,9 +1,5 @@
 # A Unique name for this workflow
-<<<<<<< HEAD
 name: CI-ABACUS-DEVPRO-DEPRECATED
-=======
-name: CI-LFLPartialSandbox-DEPRECATED
->>>>>>> a69622703f4907728234f440c88053c26d71863a
 
 # Definition when the workflow should run
 on:
