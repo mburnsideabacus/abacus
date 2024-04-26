@@ -1,5 +1,5 @@
 # A Unique name for this workflow
-name: CI-ABACUS-DEVPRO
+name: CI-ABACUS-DEVPRO-DEPRECATED
 
 # Definition when the workflow should run
 on:

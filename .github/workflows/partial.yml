@@ -1,5 +1,5 @@
 # A Unique name for this workflow
-name: CI-ABACUS-PARTIAL
+name: CI-ABACUS-PARTIAL-DEPRECATED
 
 # Definition when the workflow should run
 on:
