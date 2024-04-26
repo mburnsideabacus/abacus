@@ -1,5 +1,9 @@
 # A Unique name for this workflow
+<<<<<<< HEAD
 name: CI-ABACUS-DEVPRO-DEPRECATED
+=======
+name: CI-LFLPartialSandbox-DEPRECATED
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
 
 # Definition when the workflow should run
 on:
@@ -12,12 +16,12 @@ jobs:
     steps:
       # Checkout the code in the pull request
       - name: "Checkout source code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Cache node_modules to speed up the process
       - name: Restore node_modules cache
         id: cache-npm
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: npm-${{ hashFiles('**/package-lock.json') }}
@@ -52,7 +56,7 @@ jobs:
           ~/sfdx/bin/sfdx version
       # Checkout the source code
       - name: "Checkout source code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Store secret for review sandbox
       - name: "Populate auth file with ABACUS_DEVPRO_URL secret"
@@ -91,7 +95,7 @@ jobs:
           TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
           TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
-          TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+          TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 

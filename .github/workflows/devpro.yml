@@ -1,5 +1,9 @@
 # A Unique name for this workflow
+<<<<<<< HEAD
 name: CI-ABACUS-DEVPRO
+=======
+name: CI-LFLDEVPRO
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
 
 # Definition when the workflow should run
 on:
@@ -18,12 +22,20 @@ jobs:
     steps:
       # Checkout the code in the pull request
       - name: "Checkout source code"
+<<<<<<< HEAD
         uses: actions/checkout@v3
+=======
+        uses: actions/checkout@v4
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
 
       # Cache node_modules to speed up the process
       - name: Restore node_modules cache
         id: cache-npm
+<<<<<<< HEAD
         uses: actions/cache@v3
+=======
+        uses: actions/cache@v4
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
         with:
           path: node_modules
           key: npm-${{ hashFiles('**/package-lock.json') }}
@@ -58,6 +70,7 @@ jobs:
           ~/sfdx/bin/sfdx version
       # Checkout the source code
       - name: "Checkout source code"
+<<<<<<< HEAD
         uses: actions/checkout@v3
 
       # Store secret for review sandbox
@@ -68,10 +81,23 @@ jobs:
           secretFileSize=$(wc -c "./ABACUS_DEVPRO_URL.txt" | awk '{print $1}')
           if [ $secretFileSize == 1 ]; then
               echo "Missing ABACUS_DEVPRO_URL secret. Is this workflow running on a fork?";
+=======
+        uses: actions/checkout@v4
+
+      # Store secret for review sandbox
+      - name: "Populate auth file with LFL_DEVPRO_SANDBOX_URL secret"
+        shell: bash
+        run: |
+          echo ${{ secrets.LFL_DEVPRO_SANDBOX_URL}} > ./LFL_DEVPRO_SANDBOX_URL.txt
+          secretFileSize=$(wc -c "./LFL_DEVPRO_SANDBOX_URL.txt" | awk '{print $1}')
+          if [ $secretFileSize == 1 ]; then
+              echo "Missing LFL_DEVPRO_SANDBOX_URL secret. Is this workflow running on a fork?";
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
               exit 1;
           fi
       # Authenticate sandbox
       - name: "Authenticate Sandbox"
+<<<<<<< HEAD
         run: sf org login sfdx-url --sfdx-url-file ./ABACUS_DEVPRO_URL.txt --alias AbacusDEVPRO --set-default
 
       # Run Deploy Custom Objects
@@ -85,19 +111,42 @@ jobs:
       # Run Deploy CustomMetadata
       - name: "Custom Metadata"
         run: sf project deploy start --metadata CustomMetadata --target-org AbacusDEVPRO
+=======
+        run: sf org login sfdx-url --sfdx-url-file ./LFL_DEVPRO_SANDBOX_URL.txt --alias LFLDEVPRO --set-default
+
+      # Run Deploy Custom Objects
+      #- name: "Deploy Custom Objects"
+      # run: sf project deploy start --metadata "CustomObject:Client_Objective__c, CustomObject:Client_Objective_TimeSeries__c,CustomObject:TimeSeries_Log__c,CustomObject:Incidental_Data__c,CustomObject:NDIS_Report__c,CustomObject:Objective__c,CustomObject:Program__c,CustomObject:SD__c,CustomObject:Session__c,CustomObject:Session_Obj__c,CustomObject:Session_Statistics__c" -u LFLDEVPRO
+
+      # Run Deploy CachePartitions
+      - name: "Cache Partitions"
+        run: sf project deploy start --metadata PlatformCachePartition --target-org LFLDEVPRO
+
+      # Run Deploy CustomMetadata
+      - name: "Custom Metadata"
+        run: sf project deploy start --metadata CustomMetadata --target-org LFLDEVPRO
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
 
       # Run Deploy Apex
       - name: "Deploy Apex and Run Specified Tests"
         run: >
           sf project deploy start --metadata AuraDefinitionBundle 
           --metadata ApexClass --metadata ApexTrigger --metadata Flow 
+<<<<<<< HEAD
           --metadata LightningMessageChannel --target-org AbacusDEVPRO 
+=======
+          --metadata LightningMessageChannel --target-org LFLDEVPRO 
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
           --test-level RunSpecifiedTests 
           --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
           TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
           TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
+<<<<<<< HEAD
           TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+=======
+          TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
@@ -105,19 +154,30 @@ jobs:
 
       # Run Deploy LWC
       - name: "Deploy LWC"
+<<<<<<< HEAD
         run: sf project deploy start --metadata LightningComponentBundle --target-org AbacusDEVPRO
+=======
+        run: sf project deploy start --metadata LightningComponentBundle --target-org LFLDEVPRO
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
 
       # Run Run Apex tests
       - name: "Run Specifed Apex Tests to Gather Code Coverage"
         run: >
+<<<<<<< HEAD
           sf apex run test --test-level  RunSpecifiedTests --tests TestL4LController 
           TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper 
           TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
+=======
+          sf apex run test --test-level  RunSpecifiedTests 
+          --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
+          TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
           TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
           TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
+<<<<<<< HEAD
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
           TestLFLTreeUtil 
           --target-org AbacusDEVPRO 
@@ -125,6 +185,11 @@ jobs:
           --result-format human 
           --output-dir ./tests/apex -w 20
 
+=======
+          TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
+          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil 
+          --target-org LFLDEVPRO --code-coverage --result-format human --output-dir ./tests/apex -w 20
+>>>>>>> a69622703f4907728234f440c88053c26d71863a
       # Delete temporary test file that Codecov is unable to parse
       #- name: "Delete coverage file (temporary step)"
       #  run: rm ./tests/apex/test-result-707*-codecoverage.json
