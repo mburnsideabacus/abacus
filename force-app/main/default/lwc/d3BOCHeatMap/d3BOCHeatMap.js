@@ -234,13 +234,6 @@ export default class D3BOCHeatMap extends LightningElement {
       `${TAG}`
     );
 
-    logInfo(
-      this.recordId,
-      `COMPONENT: label`,
-      `APEX_EVENT_TRACKING_SCENARIO`,
-      `TAG`
-    );
-
     logDebug(
       this.recordId,
       `${COMPONENT}.initializeD3(): Y-axis:  ${d3behaviourYAxisArray} `,
