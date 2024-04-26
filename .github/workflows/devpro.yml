@@ -1,0 +1,137 @@
+# A Unique name for this workflow
+name: CI-ABACUS-DEVPRO
+
+# Definition when the workflow should run
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "sfdx-project.json"
+      - "README.md"
+
+# Jobs to be executed
+jobs:
+  formatting-and-linting:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code in the pull request
+      - name: "Checkout source code"
+        uses: actions/checkout@v3
+
+      # Cache node_modules to speed up the process
+      - name: Restore node_modules cache
+        id: cache-npm
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            npm-${{ env.cache-name }}-
+            npm-
+      # Install npm dependencies for Prettier and Jest
+      - name: "Install npm dependencies"
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        run: npm install
+
+      # Prettier checking
+      - name: "Code formatting verification with Prettier"
+        run: npm run prettier --check
+
+      # ESlint
+      - name: "Lint Lightning Web Components"
+        run: npm run lint
+
+  sandbox-push:
+    runs-on: ubuntu-latest
+    needs: formatting-and-linting
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      # Install Salesforce CLI
+      - name: "Install Salesforce CLI"
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+          mkdir ~/sfdx
+          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
+          ~/sfdx/bin/sfdx version
+      # Checkout the source code
+      - name: "Checkout source code"
+        uses: actions/checkout@v3
+
+      # Store secret for review sandbox
+      - name: "Populate auth file with ABACUS_DEVPRO_URL secret"
+        shell: bash
+        run: |
+          echo ${{ secrets.ABACUS_DEVPRO_URL}} > ./ABACUS_DEVPRO_URL.txt
+          secretFileSize=$(wc -c "./ABACUS_DEVPRO_URL.txt" | awk '{print $1}')
+          if [ $secretFileSize == 1 ]; then
+              echo "Missing ABACUS_DEVPRO_URL secret. Is this workflow running on a fork?";
+              exit 1;
+          fi
+      # Authenticate sandbox
+      - name: "Authenticate Sandbox"
+        run: sf org login sfdx-url --sfdx-url-file ./ABACUS_DEVPRO_URL.txt --alias AbacusDEVPRO --set-default
+
+      # Run Deploy Custom Objects
+      #- name: "Deploy Custom Objects"
+      # run: sf project deploy start --metadata "CustomObject:Client_Objective__c, CustomObject:Client_Objective_TimeSeries__c,CustomObject:TimeSeries_Log__c,CustomObject:Incidental_Data__c,CustomObject:NDIS_Report__c,CustomObject:Objective__c,CustomObject:Program__c,CustomObject:SD__c,CustomObject:Session__c,CustomObject:Session_Obj__c,CustomObject:Session_Statistics__c" -u AbacusDEVPRO
+
+      # Run Deploy CachePartitions
+      - name: "Cache Partitions"
+        run: sf project deploy start --metadata PlatformCachePartition --target-org AbacusDEVPRO
+
+      # Run Deploy CustomMetadata
+      - name: "Custom Metadata"
+        run: sf project deploy start --metadata CustomMetadata --target-org AbacusDEVPRO
+
+      # Run Deploy Apex
+      - name: "Deploy Apex and Run Specified Tests"
+        run: >
+          sf project deploy start --metadata AuraDefinitionBundle 
+          --metadata ApexClass --metadata ApexTrigger --metadata Flow 
+          --metadata LightningMessageChannel --target-org AbacusDEVPRO 
+          --test-level RunSpecifiedTests 
+          --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
+          TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
+          TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
+          TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
+          TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+          TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
+          TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
+          TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
+          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
+
+      # Run Deploy LWC
+      - name: "Deploy LWC"
+        run: sf project deploy start --metadata LightningComponentBundle --target-org AbacusDEVPRO
+
+      # Run Run Apex tests
+      - name: "Run Specifed Apex Tests to Gather Code Coverage"
+        run: >
+          sf apex run test --test-level  RunSpecifiedTests --tests TestL4LController 
+          TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper 
+          TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
+          TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
+          TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
+          TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+          TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
+          TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
+          TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
+          TestLFLTreeUtil 
+          --target-org AbacusDEVPRO 
+          --code-coverage 
+          --result-format human 
+          --output-dir ./tests/apex -w 20
+
+      # Delete temporary test file that Codecov is unable to parse
+      #- name: "Delete coverage file (temporary step)"
+      #  run: rm ./tests/apex/test-result-707*-codecoverage.json
+
+      # Upload code coverage data
+      - name: "Upload code coverage for Apex to Codecov.io"
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: Apex
