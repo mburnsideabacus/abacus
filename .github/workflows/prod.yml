@@ -78,46 +78,20 @@ jobs:
 
       # Run Deploy CustomMetadata
       - name: "Custom Metadata"
-<<<<<<< HEAD
         run: sf project deploy start --metadata CustomMetadata --target-org AbacusPROD
+
+      # Run Deploy PostCopySandbox functionality
+      - name: "Deploy PostCopySandbox Apex and Run Specified Tests"
+        run: >
+          sf project deploy start
+           --source-dir postcopysandbox
+           --target-org AbacusPROD 
+           --test-level RunSpecifiedTests 
+           --tests LFLPostCopySandboxTest
 
       # Run Deploy Apex
       - name: "Deploy Apex and Run Specified Tests"
         run: sf project deploy start --metadata AuraDefinitionBundle --metadata ApexClass --metadata ApexTrigger --metadata Flow --metadata LightningMessageChannel --target-org AbacusPROD --test-level RunSpecifiedTests --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
-=======
-        run: sf project deploy start --metadata CustomMetadata --target-org LFLHyper
-
-      # Run Deploy PostCopySandbox functionality
-      - name: "Deploy Apex and Run Specified Tests"
-        run: >
-          sf project deploy start
-          --source-dir postcopysandbox
-          --target-org LFLHyper 
-          --test-level RunSpecifiedTests 
-          --tests LFLPostCopySandboxTest
-
-      # Run Deploy Apex
-      - name: "Deploy Apex, Triggers, Flow, MessageChannels and Run Specified Tests"
-        run: >
-          sf project deploy start 
-          --metadata AuraDefinitionBundle 
-          --metadata ApexClass 
-          --metadata ApexTrigger 
-          --metadata Flow 
-          --metadata LightningMessageChannel 
-          --target-org LFLHyper --test-level RunSpecifiedTests 
-          --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
-          TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler 
-          TestLFLClientObjectiveHelper TestLFLInvocableMasteryStatistics 
-          TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics TestLFLPopulateTestData 
-          TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
-          TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList 
-          TestL4LNebulaComponentController TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing 
-          TestTrgUniqueObjectivePerClientObjective TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler 
-          TestLFLDTDRates TestLFLDTDRateMaster TestLFLInvocableListUnusedObj TestL4LStagesByArea 
-          TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler TestLFLLoginBannerController 
-          TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
->>>>>>> c38906b6f9565a7f9732329c36f9a28ad37fd8a3
 
       # Run Deploy LWC
       - name: "Deploy LWC"
