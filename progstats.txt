@@ -1,0 +1,79 @@
+Map<String,Date> tslogdates = new Map<String,Date>();
+for (TimeSeries_Log__c tsl: [select name,ts_log_datetime__c from timeseries_log__c]) {
+Date d = Date.newInstance(tsl.ts_log_datetime__c.year(), tsl.ts_log_datetime__c.month(), tsl.ts_log_datetime__c.day());
+tslogdates.put(tsl.name,d);
+}
+//System.debug(tslogdates);
+List<Account> accountList=new List<Account>();
+
+List<Date> rundates = new List<Date>();
+//List<aggregateresult> arminlist = new List<aggregateresult>([select client_objective__r.client__c client,min(RunID__c) minRunId,max(RunID__c) maxRunId,max(TS_load_datetime__c) maxTS,min(TS_load_datetime__c) minTS,count(objective__c) objIds,count_distinct(client_objective__c) distinctCOs,count_distinct(client__c) distinctClient from client_objective_timeseries__c where client__c='0015h00001dBlCZAA0' and status__c='ACQ' and group by client_objective__r.client__c]);
+List<aggregateresult> arminlist = new List<aggregateresult>([select client_objective__r.client__c client,min(RunID__c) minRunId,max(RunID__c) maxRunId,max(TS_load_datetime__c) maxTS,min(TS_load_datetime__c) minTS,count(objective__c) objIds,count_distinct(client_objective__c) distinctCOs,count_distinct(client__c) distinctClients from client_objective_timeseries__c where status__c='ACQ' group by client_objective__r.client__c]);
+//List<aggregateresult> arminlist = new List<aggregateresult>([select objective__r.sd__r.name progid,min(RunID__c) minRunId,max(RunID__c) maxRunId,max(TS_load_datetime__c) maxTS,min(TS_load_datetime__c) minTS,count(objective__c) objIds,count_distinct(client_objective__c) distinctCOs,count_distinct(client__c) distinctClients from client_objective_timeseries__c where status__c='ACQ' group by objective__r.sd__r.name]);
+
+
+for (aggregateresult ar: arminlist) {
+String client=(String) ar.get('client');
+Account a = new Account(Id=client);
+
+Date startd = (Date) tslogdates.get((String) ar.get('minRunId'));
+Date endd = (Date) tslogdates.get((String) ar.get('maxRunId'));
+System.debug('xxxxxxxx '+a.Id+'xxxxxxxxxx'+startd);
+
+Decimal elapsed=startd.daysBetween(endd)/7;
+
+System.debug('ZZZZZ client= '+client+' startd'+startd+' - '+endd+' = '+elapsed+ 'weeks');
+Integer distinctClients=(Integer) ar.get('distinctClients');
+Integer distinctCOs=(Integer) ar.get('distinctCOs');
+System.debug('ZZZZZ client='+client+' cos='+distinctCOs);
+//calculate acq/client/week
+Decimal acqRate=0;
+if (elapsed>0) {
+acqRate=(Decimal) (distinctCOs/distinctClients/elapsed);
+} else {
+acqRate=0;
+}
+a.ACQ_Rate__c=acqRate;
+//System.debug('Program: '+client+', acqRate='+acqRate.setScale(2));
+accountList.add(a);
+}
+
+System.debug(accountList);
+if (!Test.isRunningTest()) {
+update accountList;
+}
+
+
+List<aggregateresult> arlist = new List<aggregateresult>([select objective__r.sd__r.program__c progid,RunID__c,count(id) from client_objective_timeseries__c where status__c='ACQ' group by objective__r.sd__r.program__c,RunID__c order by RunId__c]);
+System.debug(arlist.size());
+
+Map<String,integer> intmap = new Map<String , integer> ();
+
+for (aggregateresult ar: arlist) {
+
+intmap.put((String) ar.get('RunID__c')+'~'+(String) ar.get('progid'),(Integer) ar.get('expr0'));
+
+//Date d = (Date) tslogdates.get((String) ar.get('RunId__c'));
+//System.debug(d);
+//Integer cnt=(Integer) ar.get('expr0');
+
+//Date d1 = Date.newInstance(dt1.year(), dt1.month(), dt1.day());
+//Date d2 = Date.newInstance(dt2.year(), dt2.month(), dt2.day());
+//System.debug(d2.daysBetween(d1)/7);
+//System.debug((String) ar.get('client') + '   '+ar.get('RunID__c')+' '+cnt);
+// Map<Client,Map<runid,integer>>
+
+}
+
+System.debug(intmap.keySet());
+//System.debug(intmap);
+
+
+LFLBatchStatisticsGatherer l = new LFLBatchStatisticsGatherer();
+ID batchprocessid = Database.executeBatch(l);
+System.debug('xxxxx '+batchprocessid);
+
+SchedulableContext sc = null;
+LFLBatchStatisticsGathererScheduler tsc = new LFLBatchStatisticsGathererScheduler();
+tsc.execute(sc);
+

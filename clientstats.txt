@@ -1,0 +1,38 @@
+Map<String,Date> tslogdates = new Map<String,Date>();
+
+for (TimeSeries_Log__c tsl: [select name,ts_log_datetime__c from timeseries_log__c]) {
+
+
+Date d = Date.newInstance(tsl.ts_log_datetime__c.year(), tsl.ts_log_datetime__c.month(), tsl.ts_log_datetime__c.day());
+tslogdates.put(tsl.name,d);
+}
+
+System.debug(tslogdates);
+
+List<Date> rundates = new List<Date>();
+
+List<aggregateresult> arlist = new List<aggregateresult>([
+select client_objective__r.client__r.lastname client,RunID__c,count(id) from client_objective_timeseries__c 
+where status__c='ACQ' group by client_objective__r.client__r.lastname,RunId__c order by min(TS_Load_DateTime__c),max(TS_Load_DateTime__c) ]);
+System.debug(arlist.size());
+
+Map<String,integer> intmap = new Map<String , integer> ();
+
+for (aggregateresult ar: arlist) {
+
+intmap.put((String) ar.get('client')+'-'+(String) ar.get('RunID__c'),(Integer) ar.get('expr0'));
+
+//Date d = (Date) tslogdates.get((String) ar.get('RunId__c'));
+//System.debug(d);
+//Integer cnt=(Integer) ar.get('expr0');
+
+//Date d1 = Date.newInstance(dt1.year(), dt1.month(), dt1.day());
+//Date d2 = Date.newInstance(dt2.year(), dt2.month(), dt2.day());
+//System.debug(d2.daysBetween(d1)/7);
+//System.debug((String) ar.get('client') + '   '+ar.get('RunID__c')+' '+cnt);
+// Map<Client,Map<runid,integer>>
+
+}
+
+System.debug(intmap.keySet().size());
+System.debug(intmap);
