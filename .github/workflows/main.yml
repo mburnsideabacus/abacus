@@ -96,6 +96,7 @@ jobs:
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
+          TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
 
       # Run Deploy LWC
       - name: "Deploy LWC"
@@ -113,7 +114,8 @@ jobs:
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLTreeUtil 
+          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
+
           --target-org AbacusDEVPRO 
           --code-coverage 
           --result-format human 
