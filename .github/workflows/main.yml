@@ -97,6 +97,7 @@ jobs:
           TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
           TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
+          TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
 
       # Run Deploy LWC
       - name: "Deploy LWC"
@@ -113,14 +114,9 @@ jobs:
           TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
-          TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
-
-          --target-org AbacusDEVPRO 
-          --code-coverage 
-          --result-format human 
-          --output-dir ./tests/apex -w 20
-
+          TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
+          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil 
+          --target-org LFLHyperPARTIAL --code-coverage --result-format human --output-dir ./tests/apex -w 20
       # Delete temporary test file that Codecov is unable to parse
       #- name: "Delete coverage file (temporary step)"
       #  run: rm ./tests/apex/test-result-707*-codecoverage.json
