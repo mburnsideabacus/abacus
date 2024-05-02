@@ -3,6 +3,10 @@
     <fullName>LFL_Clients</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>Current_Age__pc</columns>
+    <columns>No_Of_Active_BoC__c</columns>
+    <columns>No_of_Client_Objectives__c</columns>
+    <columns>No_Of_ACQ_Objectives__c</columns>
+    <columns>ACQ_Rate__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>IS_PERSON_ACCOUNT</field>

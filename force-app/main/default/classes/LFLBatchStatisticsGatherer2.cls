@@ -8,27 +8,14 @@
  *
  */
 
-global class LFLBatchStatisticsGatherer implements Database.Batchable<AggregateResult>, Database.Stateful {
+global class LFLBatchStatisticsGatherer2 implements Database.Batchable<AggregateResult>, Database.Stateful {
   Integer i = 0;
   String msg;
-  Map<String, Date> tslogdates = new Map<String, Date>();
 
   List<Account> accountList = new List<Account>();
 
   global Iterable<AggregateResult> start(Database.BatchableContext bc) {
-    for (TimeSeries_Log__c tsl : [
-      SELECT name, ts_log_datetime__c
-      FROM timeseries_log__c
-    ]) {
-      Date d = Date.newInstance(
-        tsl.ts_log_datetime__c.year(),
-        tsl.ts_log_datetime__c.month(),
-        tsl.ts_log_datetime__c.day()
-      );
-      tslogdates.put(tsl.name, d);
-    }
-
-    return new LFLAggregateResultIterable();
+    return new LFLAggregateResultIterable2();
   }
 
   global void execute(
@@ -40,58 +27,60 @@ global class LFLBatchStatisticsGatherer implements Database.Batchable<AggregateR
     for (AggregateResult ar : scope) {
       i = i + 1;
       String client = (String) ar.get('client');
+      String clientname = (String) ar.get('clientname');
+
       Account a = new Account(Id = client);
-      Date startd = (Date) tslogdates.get((String) ar.get('minRunId'));
-      Date endd = (Date) tslogdates.get((String) ar.get('maxRunId'));
-      Decimal elapsed = startd.daysBetween(endd) / 7;
-      elapsed += 1;
+      Date mindate = (Date) ar.get('mindate');
+      Date maxdate = (Date) ar.get('maxdate');
+      Decimal totalduration = (Decimal) ar.get('totalduration');
+      Decimal elapsed = mindate.daysBetween(maxdate) / 7;
+      Integer sessions = (Integer) ar.get('sessions');
       System.debug(
         'client= ' +
           client +
-          ' startd' +
-          startd +
+          ' mindate' +
+          mindate +
           ' - ' +
-          endd +
+          maxdate +
           ' = ' +
           elapsed +
           'weeks'
       );
-      Integer distinctClients = (Integer) ar.get('distinctClients');
-      Integer distinctCOs = (Integer) ar.get('distinctCOs');
-      System.debug(' clients=' + distinctClients + ' cos=' + distinctCOs);
-      //calculate acq/client/week
-      Decimal acqRate = 0;
-      if (elapsed > 0) {
-        acqRate = (Decimal) (distinctCOs / distinctClients / elapsed);
-      } else {
-        acqRate = 0;
-      }
-      a.ACQ_Rate__c = acqRate;
+
+      // Decimal acqRate = 0;
+      // if (elapsed > 0) {
+      //   acqRate = (Decimal) (distinctCOs / distinctClients / elapsed);
+      // } else {
+      //   acqRate = 0;
+      // }
+      a.Total_Session_Duration__c = totalduration;
+      a.No_Of_Closed_sessions__c = sessions;
       accountList.add(a);
 
-      System.debug('Program: ' + client + ', acqRate: ' + acqRate.setScale(2));
       msg +=
         'Earliest: ' +
-        ar.get('minRunId') +
+        ar.get('mindate') +
         ', Latest: ' +
-        ar.get('maxRunId') +
+        ar.get('maxdate') +
         +', Elapsed: ' +
         elapsed +
         ' weeks, Client: ' +
         client +
-        ', distinctCOs: ' +
-        distinctCOs +
-        ', AcqRate: ' +
-        acqRate.setScale(2) +
+        ', Name: ' +
+        clientname +
+        ', Sessions: ' +
+        sessions +
+        ', Total Duration: ' +
+        totalduration +
         '\n';
       //   // Process each result here as needed
     }
   }
 
   global void finish(Database.BatchableContext bc) {
-    System.debug('in LFLBatchStatisticsGatherer.finish()');
+    System.debug('in LFLBatchStatisticsGatherer2.finish()');
 
-    System.debug('updating Accounts');
+    //System.debug('updating Accounts');
 
     if (!Test.isRunningTest()) {
       update accountList;
@@ -102,7 +91,7 @@ global class LFLBatchStatisticsGatherer implements Database.Batchable<AggregateR
 
     mail.setToAddresses(new List<String>{ 'mburnside@salesforce.com' });
     mail.setReplyTo('batch@acme.com');
-    mail.setSenderDisplayName('Stats Batch Processing');
+    mail.setSenderDisplayName('Stats Batch Processing2');
     mail.setSubject(orgname + ' Stats completed');
 
     mail.setPlainTextBody('Successfully processed ' + i + ' records\n' + msg);
