@@ -94,15 +94,15 @@ jobs:
           --metadata LightningMessageChannel --target-org AbacusPARTIAL 
           --test-level RunSpecifiedTests 
           --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
-          TestLFLSDWrapper TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
+          TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper 
+          TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
           TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg 
-          TestDaysSinceUpdatedTr TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
+          TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController 
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
-          TestLFLInvocableListUnusedObj TestL4LStagesByArea TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler TestLFLTreeUtil
-          TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
+          TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
+          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
 
       # Run Deploy LWC
       - name: "Deploy LWC"
@@ -120,8 +120,7 @@ jobs:
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLAggregateResultIterable LFLAggregateResultIterator
-
+          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
           --target-org AbacusPARTIAL 
           --code-coverage 
           --result-format human 
