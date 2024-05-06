@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>No_of_Client_Objectives__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>The current total of Client Objectives</inlineHelpText>
     <label># Client Objectives - Current</label>
     <summaryForeignKey>Client_Objective__c.Client__c</summaryForeignKey>
     <summaryOperation>count</summaryOperation>

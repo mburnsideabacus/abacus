@@ -286,12 +286,12 @@ private class TestL4LSessionStatsController {
     );
     System.assert(
       so.size() > 0,
-      'Expected at least one session_statistics__c record retrieved.'
+      'True path - Expected at least one session_statistics__c record retrieved.'
     );
     so = L4LSessionStatsController.getD3Stats(clientId, false);
     System.assert(
       so.size() > 0,
-      'Expected at least one session_statistics__c record retrieved.'
+      'False path - Expected at least one session_statistics__c record retrieved.'
     );
   }
 
@@ -318,7 +318,7 @@ private class TestL4LSessionStatsController {
     );
     System.assert(
       so.size() == 0,
-      '??Expected at least one session_statistics__c record retrieved.'
+      '??True path - Expected at least one session_statistics__c record retrieved.'
     );
     so = L4LSessionStatsController.getD3StatsByProgram(
       clientId,
@@ -327,7 +327,7 @@ private class TestL4LSessionStatsController {
     );
     System.assert(
       so.size() == 0,
-      '??Expected at least one session_statistics__c record retrieved.'
+      '??False path Expected at least one session_statistics__c record retrieved.'
     );
   }
 
