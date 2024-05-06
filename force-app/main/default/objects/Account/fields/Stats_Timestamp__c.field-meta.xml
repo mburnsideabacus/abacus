@@ -2,7 +2,10 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Stats_Timestamp__c</fullName>
     <externalId>false</externalId>
+<<<<<<< HEAD
     <inlineHelpText>The Timestamp for completion of gathering statistics</inlineHelpText>
+=======
+>>>>>>> ef5d9257ea9afea53a4fa956f7ff94444737d5e2
     <label>Statistics Run Timestamp</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

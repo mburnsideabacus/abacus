@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ACQ_Count__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>The number of ACQ skills at the time of  gathering the statistics</inlineHelpText>
     <label># ACQ Objectives at Run</label>
     <precision>18</precision>
     <required>false</required>

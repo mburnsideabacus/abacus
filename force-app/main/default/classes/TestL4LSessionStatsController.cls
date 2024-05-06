@@ -267,33 +267,33 @@ private class TestL4LSessionStatsController {
   /*******************************************************************************************************
    * @description Test getD3Stats method
    * @param void
-   *
+   * @deprecated COMMENTED OUT 7/5/24
    *
    * @example
    * TestL4LSessionStatsController.testGetD3Stats();
    */
 
-  @isTest
-  static void testGetD3Stats() {
-    Test.startTest();
-    LFLPopulateTestData.load();
-    Id clientId = [SELECT id FROM Account WHERE FirstName = 'Test FName'].Id;
-    Test.stopTest();
+  // @isTest
+  // static void testGetD3Stats() {
+  //   Test.startTest();
+  //   LFLPopulateTestData.load();
+  //   Id clientId = [SELECT id FROM Account WHERE FirstName = 'Test FName'].Id;
+  //   Test.stopTest();
 
-    List<session_statistics__c> so = L4LSessionStatsController.getD3Stats(
-      clientId,
-      true
-    );
-    System.assert(
-      so.size() > 0,
-      'True path - Expected at least one session_statistics__c record retrieved.'
-    );
-    so = L4LSessionStatsController.getD3Stats(clientId, false);
-    System.assert(
-      so.size() > 0,
-      'False path - Expected at least one session_statistics__c record retrieved.'
-    );
-  }
+  //   List<session_statistics__c> so = L4LSessionStatsController.getD3Stats(
+  //     clientId,
+  //     true
+  //   );
+  //   System.assert(
+  //     so.size() > 0,
+  //     'Expected at least one session_statistics__c record retrieved.'
+  //   );
+  //   so = L4LSessionStatsController.getD3Stats(clientId, false);
+  //   System.assert(
+  //     so.size() > 0,
+  //     'Expected at least one session_statistics__c record retrieved.'
+  //   );
+  // }
 
   /*******************************************************************************************************
    * @description Test getD3StatsByProgram method

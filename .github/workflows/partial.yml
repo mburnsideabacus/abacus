@@ -93,7 +93,7 @@ jobs:
           --metadata ApexClass --metadata ApexTrigger --metadata Flow 
           --metadata LightningMessageChannel --target-org AbacusPARTIAL 
           --test-level RunSpecifiedTests 
-          --tests TestL4LController TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil 
+          --tests TestL4LController 
           TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper 
           TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
@@ -102,7 +102,8 @@ jobs:
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
+          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
+          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler
 
       # Run Deploy LWC
       - name: "Deploy LWC"
@@ -111,7 +112,8 @@ jobs:
       # Run Run Apex tests
       - name: "Run Specifed Apex Tests to Gather Code Coverage"
         run: >
-          sf apex run test --test-level  RunSpecifiedTests --tests TestL4LController 
+          sf apex run test --test-level  RunSpecifiedTests 
+          --tests TestL4LController 
           TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper 
           TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper 
           TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics 
@@ -120,12 +122,9 @@ jobs:
           TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective 
           TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster 
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
-          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
-          --target-org AbacusPARTIAL 
-          --code-coverage 
-          --result-format human 
-          --output-dir ./tests/apex -w 20
-
+          TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
+          TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler
+          --target-org AbacusPARTIAL --code-coverage --result-format human --output-dir ./tests/apex -w 20
       # Delete temporary test file that Codecov is unable to parse
       #- name: "Delete coverage file (temporary step)"
       #  run: rm ./tests/apex/test-result-707*-codecoverage.json
