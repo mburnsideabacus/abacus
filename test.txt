@@ -37,5 +37,25 @@ LFLBatchStatisticsGatherer l = new LFLBatchStatisticsGatherer();
 ID batchprocessid = Database.executeBatch(l);
 System.debug('xxxxx '+batchprocessid);
 
-LFLPopulateTestData.load();
+
+LFLBatchStatisticsGatherer2 l = new LFLBatchStatisticsGatherer2();
+ID batchprocessid = Database.executeBatch(l);
+System.debug('xxxxx '+batchprocessid);
+
 >>>>>>> e5e2dc8e5c57d6f7451c3b5d97dab48f01f9fed7
+
+
+LFLDTDRates r = new LFLDTDRates();
+System.debug(LFLDTDRates.getAcquisitionRateforClientTurbo('0015h00001dBhtpAAC'));
+
+System.debug(LFLDTDRates.getAcquisitionRateforClientTurbo('0015h00001dBhtpAAC'));
+0015h00001dBhtpAAC
+
+list<Session__c> sessionList = [
+      SELECT date__c, session_length__c
+      FROM Session__c
+      WHERE client__c = '0015h00001dBhtpAAC'
+      ORDER BY date__c
+    ];
+    System.debug('Session List size='+sessionList.size());
+    System.debug(sessionList);

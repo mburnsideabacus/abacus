@@ -282,7 +282,7 @@ export default class D3DTDRates extends LightningElement {
         d3
           .line()
           .x(function (d) {
-            return x(d.endd);
+            return x(d.endd); //change?
           })
           .y(function (d) {
             return y(d.val);
