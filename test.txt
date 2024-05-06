@@ -22,13 +22,6 @@ sd__r.program__r.status__c from objective__c
 where name like '%blue circle%' 
 or sd__r.name like '%blue circle%'
 or sd__r.program__r.name like '%blue circle%'
-<<<<<<< HEAD
-
-
-sf project deploy start --metadata "CustomObject:Session_BOC__c" --metadata "ApexTrigger:trgPopulateSessionBOC" --metadata "ApexClass:TestLFLSessionBOCTrg"  --target-org AbacusPROD --test-level RunSpecifiedTests --tests TestLFLSessionBOCTrg
-sf project deploy start --metadata "CustomObject:Client_Objective__c, CustomObject:Client_Objective_TimeSeries__c,CustomObject:TimeSeries_Log__c,CustomObject:Incidental_Data__c,CustomObject:NDIS_Report__c,CustomObject:Objective__c,CustomObject:Program__c,CustomObject:SD__c,CustomObject:Session__c,CustomObject:Session_Obj__c,CustomObject:Session_Statistics__c" -u AbacusDEVPRO
-
-=======
 //
 
 
@@ -56,29 +49,6 @@ ID batchprocessid = Database.executeBatch(l);
 System.debug('xxxxx '+batchprocessid);
 
 
-<<<<<<< HEAD
-LFLBatchStatisticsGatherer2 l = new LFLBatchStatisticsGatherer2();
-ID batchprocessid = Database.executeBatch(l);
-System.debug('xxxxx '+batchprocessid);
-
->>>>>>> e5e2dc8e5c57d6f7451c3b5d97dab48f01f9fed7
-
-
-LFLDTDRates r = new LFLDTDRates();
-System.debug(LFLDTDRates.getAcquisitionRateforClientTurbo('0015h00001dBhtpAAC'));
-
-System.debug(LFLDTDRates.getAcquisitionRateforClientTurbo('0015h00001dBhtpAAC'));
-0015h00001dBhtpAAC
-
-list<Session__c> sessionList = [
-      SELECT date__c, session_length__c
-      FROM Session__c
-      WHERE client__c = '0015h00001dBhtpAAC'
-      ORDER BY date__c
-    ];
-    System.debug('Session List size='+sessionList.size());
-    System.debug(sessionList);
-=======
 
 select client__c client,client__r.lastname lastname,count(ID)cos from client_objective__c
 where status__c='ACQ'
@@ -86,5 +56,4 @@ and client__r.current__c=True
 group by client__c,client__r.lastname
 
 
-LFLPopulateTestData.load();
->>>>>>> ef5d9257ea9afea53a4fa956f7ff94444737d5e2
+sf project deploy start --metadata AuraDefinitionBundle  --metadata ApexClass --metadata ApexTrigger --metadata Flow  --metadata LightningMessageChannel --target-org LFLDevPRO  --test-level RunSpecifiedTests  --tests TestL4LController  TestL4LSessionStatsController TestL4LSDStageMap TestLFLUtil TestLFLSDWrapper  TestL4LTimeSeries TestL4LTimeSeriesScheduler TestLFLClientObjectiveHelper  TestLFLInvocableMasteryStatistics TestLFLInvocableReportWizard TestLFLInvocableSessionStatistics  TestLFLPopulateTestData TestLFLProgramStatusCascadeUtil TestCascadeProgramStatusTrg TestCascadeSDStatusTrg  TestDaysSinceUpdatedTrg TestLFLSessionStatsTrg TestClientObjectiveList TestL4LNebulaComponentController  TestL4LExceptionRateCalculation TestL4LExceptionClientObjectiveMissing TestTrgUniqueObjectivePerClientObjective  TestLFLTimeSeriesBatch TestLFLTimeSeriesBatchScheduler TestLFLDTDRates TestLFLDTDRateMaster  TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler  TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler --ignore-conflicts
