@@ -20,11 +20,26 @@
  * See the Apex Language Reference for more information about Testing and Code Coverage.
  */
 @isTest
-private class TestLFLAggregateResultIterable {
+private class TestLFLBatchStatisticsGathererScheduler {
   @isTest
-  static void myUnitTest() {
-    LFLAggregateResultIterable l = new LFLAggregateResultIterable();
-    Iterator<aggregateresult> i = l.iterator();
-    System.assert(i != null, 'iterator should have a value');
+  static void myScheduleTest() {
+    Test.startTest();
+    String jobId = System.schedule(
+      'testBasicScheduledApex',
+      '0 30 * ? * *',
+      new LFLBatchStatisticsGathererScheduler()
+    );
+
+    CronTrigger ct = [
+      SELECT Id, CronExpression, TimesTriggered, NextFireTime
+      FROM CronTrigger
+      WHERE id = :jobId
+    ];
+
+    System.assertEquals('0 30 * ? * *', ct.CronExpression);
+
+    Test.stopTest();
+
+    // TO DO: implement unit test
   }
 }
