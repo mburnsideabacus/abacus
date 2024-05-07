@@ -124,7 +124,11 @@ jobs:
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
           TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler
+<<<<<<< HEAD
           --target-org AbacusDEVPRO --code-coverage --result-format human --output-dir ./tests/apex -w 20
+=======
+          --target-org LFLDEVPRO --code-coverage --result-format human --output-dir ./tests/apex -w 20
+>>>>>>> 8de139d09644316b2e3e1e14856b5c31e8b6c735
       # Delete temporary test file that Codecov is unable to parse
       #- name: "Delete coverage file (temporary step)"
       #  run: rm ./tests/apex/test-result-707*-codecoverage.json
