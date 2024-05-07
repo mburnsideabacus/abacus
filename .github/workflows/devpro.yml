@@ -104,7 +104,6 @@ jobs:
           TestLFLInvocableListUnusedObj TestL4LStagesByArea  TestLFLTSBatchUtil TestLFLTSBatchUtilScheduler 
           TestLFLTreeUtil TestLFLBatchStatisticsGatherer TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 LFLAggregateResultIterator
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler
-
       # Run Deploy LWC
       - name: "Deploy LWC"
         run: sf project deploy start --metadata LightningComponentBundle --target-org AbacusDEVPRO
