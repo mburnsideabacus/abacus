@@ -80,16 +80,16 @@ jobs:
 
       # Run Deploy CachePartitions
       - name: "Cache Partitions"
-        run: sf project deploy start --metadata PlatformCachePartition --target-org AbacusDEVPRO
+        run: sf project deploy start --ignore-conflicts --metadata PlatformCachePartition --target-org AbacusDEVPRO
 
       # Run Deploy CustomMetadata
       - name: "Custom Metadata"
-        run: sf project deploy start --metadata CustomMetadata --target-org AbacusDEVPRO
+        run: sf project deploy start --ignore-conflicts --metadata CustomMetadata --target-org AbacusDEVPRO
 
       # Run Deploy Apex
       - name: "Deploy Apex and Run Specified Tests"
         run: >
-          sf project deploy start --metadata AuraDefinitionBundle 
+          sf project deploy start --ignore-conflicts --metadata AuraDefinitionBundle 
           --metadata ApexClass --metadata ApexTrigger --metadata Flow 
           --metadata LightningMessageChannel --target-org AbacusDEVPRO 
           --test-level RunSpecifiedTests 
@@ -109,7 +109,7 @@ jobs:
 
       # Run Deploy LWC
       - name: "Deploy LWC"
-        run: sf project deploy start --metadata LightningComponentBundle --target-org AbacusDEVPRO
+        run: sf project deploy start --ignore-conflicts --metadata LightningComponentBundle --target-org AbacusDEVPRO
 
       # Run Run Apex tests
       - name: "Run Specifed Apex Tests to Gather Code Coverage"
