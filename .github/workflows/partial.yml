@@ -80,7 +80,7 @@ jobs:
 
       # Run Deploy CachePartitions
       - name: "Cache Partitions"
-        run: sf project deploy start --metadata PlatformCachePartition --target-org AbacusPARTIAL
+        run: sf project deploy start --ignore-conflicts --metadata PlatformCachePartition --target-org AbacusPARTIAL
 
       # Run Deploy CustomMetadata
       - name: "Custom Metadata"
