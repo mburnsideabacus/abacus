@@ -84,12 +84,12 @@ jobs:
 
       # Run Deploy CustomMetadata
       - name: "Custom Metadata"
-        run: sf project deploy start --metadata CustomMetadata --target-org AbacusPARTIAL
+        run: sf project deploy start --ignore-conflicts --metadata CustomMetadata --target-org AbacusPARTIAL
 
       # Run Deploy Apex
       - name: "Deploy Apex and Run Specified Tests"
         run: >
-          sf project deploy start --metadata AuraDefinitionBundle 
+          sf project deploy start --ignore-conflicts --metadata AuraDefinitionBundle 
           --metadata ApexClass --metadata ApexTrigger --metadata Flow 
           --metadata LightningMessageChannel --target-org AbacusPARTIAL 
           --test-level RunSpecifiedTests 
@@ -108,7 +108,7 @@ jobs:
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler -w 20
       # Run Deploy LWC
       - name: "Deploy LWC"
-        run: sf project deploy start --metadata LightningComponentBundle --target-org AbacusPARTIAL
+        run: sf project deploy start --ignore-conflicts --metadata LightningComponentBundle --target-org AbacusPARTIAL
 
       # Run Run Apex tests
       - name: "Run Specifed Apex Tests to Gather Code Coverage"
