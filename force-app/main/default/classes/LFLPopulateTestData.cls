@@ -40,7 +40,6 @@ public with sharing class LFLPopulateTestData {
       WHERE Name = 'LFL Client' AND SobjectType = 'Account'
     ]
     .Id;
-    System.debug(recTypeId);
     Account newAccount = new Account(
       RecordTypeID = recTypeId,
       FirstName = 'Test FName',
@@ -265,7 +264,6 @@ public with sharing class LFLPopulateTestData {
     so1.Objective__c = o1.Id;
     so1.correct__c = true;
     insert so1;
-
     // add a session boc
     Session_boc__c sboc1 = new Session_boc__c(
       client_boc__c = cboc1.Id,
@@ -350,9 +348,6 @@ public with sharing class LFLPopulateTestData {
     sessStat4.TotalAcquiredNonResponsive__c = 1;
     insert sessStat4;
 
-    sessStat4.previous_status__c = 'ACQ';
-    update sessStat4;
-
     // this section sets up to test the last_correct_date trigger logic
 
     // a new active SD, associated with the program
@@ -366,20 +361,9 @@ public with sharing class LFLPopulateTestData {
     insert sd2;
 
     // a new objective for the SD
-    Objective__c o = new Objective__c(Name = 'Chair', Status__c = 'Active');
-    o.SD__c = sd1.id;
-
+    Objective__c o = new Objective__c(Name = 'Chair');
+    o.SD__c = sd2.id;
     insert o;
-
-    // Client_Objective__c co99 = new Client_Objective__c(
-    //   Client__c = newAccount.Id,
-    //   Status__c = 'ACQ',
-    //   Active__c = true,
-    //   last_tested__c = Date.today(),
-    //   Objective__c = o.Id,
-    //   Client_Objective_Notes__c = 'client objective notes'
-    // );
-    // insert co99;
 
     // a client objective that is active
     Client_Objective__c co5 = new Client_Objective__c(
@@ -387,23 +371,16 @@ public with sharing class LFLPopulateTestData {
       active__c = true,
       Objective__c = o.Id,
       Client_Objective_Notes__c = 'client objective notes',
-      status__c = 'ACQ'
+      status__c = 'OBJ'
     );
     insert co5;
 
     // create a session objective with correct=false -- the test classs will update this as correct
-    Session_Obj__c so5 = new Session_Obj__c();
-    so5.Session__c = session.Id;
-    so5.Objective__c = o.Id;
-    so5.incorrect__c = true;
-    so5.previous_status__c = 'ACQ';
-    insert so5;
-
-    Session_Obj__c so6 = new Session_Obj__c();
-    so6.Session__c = session.Id;
-    so6.Objective__c = o.Id;
-    so6.correct__c = true;
-    so6.previous_status__c = 'ACQ';
-    insert so6;
+    Session_Obj__c so = new Session_Obj__c();
+    so.Session__c = session.Id;
+    so.Objective__c = o.Id;
+    so.correct__c = false;
+    so.previous_status__c = 'ACQ';
+    insert so;
   }
 }
