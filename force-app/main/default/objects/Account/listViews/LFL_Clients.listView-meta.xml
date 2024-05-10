@@ -3,16 +3,17 @@
     <fullName>LFL_Clients</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>Current__c</columns>
-    <columns>No_Of_Active_BoC__c</columns>
-    <columns>No_of_Client_Objectives__c</columns>
-    <columns>No_Of_ACQ_Objectives__c</columns>
-    <columns>ACQ_Rate__c</columns>
-    <columns>No_Of_Closed_Sessions__c</columns>
-    <columns>Total_Session_Duration__c</columns>
     <columns>First_Session__c</columns>
     <columns>Latest_Closed_Session__c</columns>
-    <columns>Stats_Timestamp__c</columns>
+    <columns>Elapsed_Weeks__c</columns>
+    <columns>Total_Session_Duration__c</columns>
+    <columns>No_Of_Closed_Sessions__c</columns>
+    <columns>No_Of_ACQ_Objectives__c</columns>
     <columns>ACQ_Count__c</columns>
+    <columns>Stats_Timestamp__c</columns>
+    <columns>ACQ_Rate__c</columns>
+    <columns>No_Of_Active_BoC__c</columns>
+    <columns>No_of_Client_Objectives__c</columns>
     <columns>ACQ_Session_Rate__c</columns>
     <filterScope>Everything</filterScope>
     <filters>

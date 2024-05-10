@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_double_quotes</fullName>
+    <active>true</active>
+    <errorConditionFormula>CONTAINS( Name , &apos;&quot;&apos;)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Please do not use double quotes in your Objective Name, single quotes is fine</errorMessage>
+</ValidationRule>

@@ -128,13 +128,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <content>Objective_Record_Page2</content>
-        <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Objective_Record_Page2</content>
         <formFactor>Large</formFactor>
@@ -143,12 +136,18 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Objective_Record_Page2</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Objective_Abacus_CL</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>

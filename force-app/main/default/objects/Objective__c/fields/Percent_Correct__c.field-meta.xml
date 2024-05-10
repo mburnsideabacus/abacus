@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Program__c</fullName>
+    <fullName>Percent_Correct__c</fullName>
     <externalId>false</externalId>
-    <formula>SD__r.Program__r.Name</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Program</label>
+    <label>Percent Correct</label>
+    <precision>8</precision>
     <required>false</required>
+    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Percent</type>
 </CustomField>

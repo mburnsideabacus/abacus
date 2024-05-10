@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objective_Abacus_CL</fullName>
+    <fields>Name</fields>
+    <fields>OID__c</fields>
+    <fields>Status__c</fields>
+    <fields>Program__c</fields>
+    <fields>SD__c</fields>
+    <label>Objective_Abacus_CL</label>
+</CompactLayout>
