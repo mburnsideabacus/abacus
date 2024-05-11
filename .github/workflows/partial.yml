@@ -106,7 +106,6 @@ jobs:
           TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer3 TestLFLBatchStatisticsGatherer2Scheduler TestLFLBatchStatisticsGatherer3Scheduler TestLFLBatchStatisticsGathererScheduler 
           TestLFLAggregateResultIterable TestLFLAggregateResultIterable2 TestLFLAggregateResultIterable3  LFLAggregateResultIterator 
           TestLFLLoginBannerController TestLFLBackupUtil TestLFLBackupUtilScheduler -w 20
- -w 20
       # Run Deploy LWC
       - name: "Deploy LWC"
         run: sf project deploy start --ignore-conflicts --metadata LightningComponentBundle --target-org AbacusPARTIAL
