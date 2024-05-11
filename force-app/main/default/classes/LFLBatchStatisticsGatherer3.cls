@@ -13,6 +13,7 @@ global class LFLBatchStatisticsGatherer3 implements Database.Batchable<Aggregate
   integer batch = 0;
   String msg = 'Objective Statistics Generation\n--------------------------------------\n';
   global Iterable<AggregateResult> start(Database.BatchableContext bc) {
+    msg += '\nBatches\n-----------\n';
     return new LFLAggregateResultIterable3();
   }
 
@@ -22,7 +23,6 @@ global class LFLBatchStatisticsGatherer3 implements Database.Batchable<Aggregate
   ) {
     AggregateResult[] results = (AggregateResult[]) scope;
     List<Objective__c> objList = new List<Objective__c>();
-    msg += '\nBatches\n-----------\n';
     batch = batch + 1;
     for (AggregateResult ar : scope) {
       i = i + 1;

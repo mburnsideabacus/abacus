@@ -16,6 +16,7 @@ global class LFLBatchStatisticsGatherer2 implements Database.Batchable<Aggregate
   Map<Id, Integer> comap = new Map<Id, Integer>();
   List<AggregateResult> coagglist = new List<AggregateResult>();
   global Iterable<AggregateResult> start(Database.BatchableContext bc) {
+    msg += '\nBatches\n-----------\n';
     coagglist = [
       SELECT client__c client, client__r.lastname lastname, count(ID) cos
       FROM client_objective__c
@@ -36,7 +37,6 @@ global class LFLBatchStatisticsGatherer2 implements Database.Batchable<Aggregate
   ) {
     AggregateResult[] results = (AggregateResult[]) scope;
     List<Account> accountList = new List<Account>();
-    msg += '\nBatches\n-----------\n';
     batch = batch + 1;
     for (AggregateResult ar : scope) {
       i = i + 1;
