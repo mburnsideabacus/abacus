@@ -21,7 +21,7 @@ global class LFLBatchStatisticsGatherer2Scheduler implements Schedulable {
   global void execute(SchedulableContext SC) {
     Id batchInstanceId = Database.executeBatch(
       new LFLBatchStatisticsGatherer2(),
-      10000
+      1000
     );
   }
 }
