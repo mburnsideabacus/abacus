@@ -1,20 +1,34 @@
-public class LFLAggregateResultIterable3 implements Iterable<AggregateResult> {
-  public Iterator<AggregateResult> iterator() {
-    List<AggregateResult> aggresults = [
-      SELECT
-        objective__c,
-        objective__r.name objname,
-        count(id) ssrecords,
-        count_distinct(session__c) sessions,
-        count_distinct(session__r.client__c) clients,
-        sum(TotalAcquiredCorrect__c) correct,
-        sum(TotalAcquiredInCorrect__c) incorrect,
-        sum(TotalAcquirednonREsponsive__c) noresponsive,
-        Sum(TotalAcquiredprompted__c) prompted
-      FROM session_Statistics__c
-      WHERE objective__c != NULL
-      GROUP BY objective__c, objective__r.name
-    ];
-    return new LFLAggregateResultIterator(aggresults);
+/**
+ * This class contains unit tests for validating the behavior of Apex classes
+ * and triggers.
+ *
+ * Unit tests are class methods that verify whether a particular piece
+ * of code is working properly. Unit test methods take no arguments,
+ * commit no data to the database, and are flagged with the testMethod
+ * keyword in the method definition.
+ *
+ * All test methods in an org are executed whenever Apex code is deployed
+ * to a production org to confirm correctness, ensure code
+ * coverage, and prevent regressions. All Apex classes are
+ * required to have at least 75% code coverage in order to be deployed
+ * to a production org. In addition, all triggers must have some code coverage.
+ *
+ * The @isTest class annotation indicates this class only contains test
+ * methods. Classes defined with the @isTest annotation do not count against
+ * the org size limit for all Apex scripts.
+ *
+ * See the Apex Language Reference for more information about Testing and Code Coverage.
+ */
+@isTest
+private class TestLFLBatchStatisticsGatherer3 {
+  @isTest
+  static void myUnitTest() {
+    Test.startTest();
+    LFLPopulateTestData.load();
+    Test.stopTest();
+    LFLBatchStatisticsGatherer3 l = new LFLBatchStatisticsGatherer3();
+    ID batchprocessid = Database.executeBatch(l);
+    System.debug('xxxxx ' + batchprocessid);
+    System.assert(batchprocessid != null, 'Expected a batch');
   }
 }
