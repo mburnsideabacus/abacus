@@ -23,3 +23,10 @@ Id batchInstanceId = Database.executeBatch(
       new LFLBatchStatisticsGatherer3(),
       1000
     );
+Id batchInstanceId = Database.executeBatch(
+      new LFLBatchStatisticsGatherer2(),
+      1000
+    );
+
+
+    sf project deploy start --metadata ApexClass:LFLAggregateResultIterable4 ApexClass:TestLFLAggregateResultIterable4 ApexClass:LFLBatchStatisticsGatherer4  ApexClass:TestLFLBatchStatisticsGatherer4  ApexClass:LFLBatchStatisticsGatherer4Scheduler  ApexClass:TestLFLBatchStatisticsGatherer4Scheduler --test-level RunSpecifiedTests  --tests ApexClass:TestLFLAggregateResultIterable4 TestLFLBatchStatisticsGatherer4 TestLFLBatchStatisticsGatherer4Scheduler --target-org AbacusPROD -w 20

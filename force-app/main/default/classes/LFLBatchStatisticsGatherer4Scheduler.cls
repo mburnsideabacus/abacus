@@ -8,7 +8,7 @@
  *
  */
 
-global class LFLBatchStatisticsGatherer3Scheduler implements Schedulable {
+global class LFLBatchStatisticsGatherer4Scheduler implements Schedulable {
   /*******************************************************************************************************
    * @name execute
    * @description Execute method
@@ -20,7 +20,7 @@ global class LFLBatchStatisticsGatherer3Scheduler implements Schedulable {
   @ReadOnly
   global void execute(SchedulableContext SC) {
     Id batchInstanceId = Database.executeBatch(
-      new LFLBatchStatisticsGatherer3(),
+      new LFLBatchStatisticsGatherer4(),
       1000
     );
   }
