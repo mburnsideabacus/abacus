@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_LFL_Objectives</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>OID__c</columns>
+    <columns>Program__c</columns>
+    <columns>SD__c</columns>
+    <columns>NAME</columns>
+    <columns>SD_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Status__c</columns>
+    <columns>Percent_Correct__c</columns>
+    <columns>Sessions__c</columns>
+    <columns>stats_timestamp__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OID__c</field>
+        <operation>contains</operation>
+        <value>LFL</value>
+    </filters>
+    <filters>
+        <field>OID__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Custom LFL Objectives</label>
+</ListView>
