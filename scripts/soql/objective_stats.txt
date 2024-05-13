@@ -1,32 +1,27 @@
-select Id,objective__c,objective__r.name from session_Statistics__c where objective__c='a0D5h00000JTz6fEAD' order by id
 
 
-for (aggregateresult ar : [select objective__c,count_distinct(session__c) sessions,sum(TotalAcquiredCorrect__c) correct,sum(TotalAcquiredInCorrect__c) incorrect,sum(TotalAcquirednonREsponsive__c) noresponsive,Sum(TotalAcquiredprompted__c) prompted from session_Statistics__c where objective__c='a0D5h00000JTz6fEAD' group by objective__c]) {
-Decimal correct = (Decimal) ar.get('correct');
-Decimal incorrect = (Decimal) ar.get('incorrect');
-Decimal prompted = (Decimal) ar.get('prompted');
-Decimal nonresponsive = (Decimal) ar.get('noresponsive');
-
-Decimal score= (Decimal) correct/correct+incorrect+prompted+nonresponsive;
-System.debug(score);
-
-
-}
-
-
-list<aggregateresult> lar = 
-[select objective__c,count_distinct(session__c),sum(TotalAcquiredCorrect__c),sum(TotalAcquiredInCorrect__c),sum(TotalAcquirednonREsponsive__c),Sum(TotalAcquiredprompted__c) from session_Statistics__c where objective__c='a0D5h00000JTz6fEAD' group by objective__c];
-system.debug(lar);
+LFLBatchStatisticsGatherer2 l = new LFLBatchStatisticsGatherer2();
+ID batchprocessid = Database.executeBatch(l);
 
 
 Id batchInstanceId = Database.executeBatch(
       new LFLBatchStatisticsGatherer3(),
       1000
     );
-Id batchInstanceId = Database.executeBatch(
+    Id batchInstanceId = Database.executeBatch(
       new LFLBatchStatisticsGatherer2(),
       1000
     );
 
+      Id batchInstanceId = Database.executeBatch(
+      new LFLBatchStatisticsGatherer4(),
+      1000
+    );
 
-    sf project deploy start --metadata ApexClass:LFLAggregateResultIterable4 ApexClass:TestLFLAggregateResultIterable4 ApexClass:LFLBatchStatisticsGatherer4  ApexClass:TestLFLBatchStatisticsGatherer4  ApexClass:LFLBatchStatisticsGatherer4Scheduler  ApexClass:TestLFLBatchStatisticsGatherer4Scheduler --test-level RunSpecifiedTests  --tests ApexClass:TestLFLAggregateResultIterable4 TestLFLBatchStatisticsGatherer4 TestLFLBatchStatisticsGatherer4Scheduler --target-org AbacusPROD -w 20
+
+//commands to deploy my APEX classes to SFDC
+sf project deploy start    --metadata ApexClass:LFLAggregateResultIterable2 ApexClass:TestLFLAggregateResultIterable2 ApexClass:LFLBatchStatisticsGatherer2  ApexClass:LFLBatchStatisticsGatherer2Scheduler  ApexClass:TestLFLBatchStatisticsGatherer2Scheduler    --test-level RunSpecifiedTests  --tests ApexClass:TestLFLAggregateResultIterable2 TestLFLBatchStatisticsGatherer2 TestLFLBatchStatisticsGatherer2Scheduler  --target-org LFPARTIAL -w 20
+
+sf project deploy start    --metadata ApexClass:LFLAggregateResultIterable3 ApexClass:TestLFLAggregateResultIterable3 ApexClass:LFLBatchStatisticsGatherer3  ApexClass:LFLBatchStatisticsGatherer3Scheduler  ApexClass:TestLFLBatchStatisticsGatherer3Scheduler    --test-level RunSpecifiedTests  --tests ApexClass:TestLFLAggregateResultIterable3 TestLFLBatchStatisticsGatherer3 TestLFLBatchStatisticsGatherer3Scheduler  --target-org LFLPARTIAL -w 20
+
+sf project deploy start    --metadata ApexClass:LFLAggregateResultIterable4 ApexClass:TestLFLAggregateResultIterable4 ApexClass:LFLBatchStatisticsGatherer4  ApexClass:LFLBatchStatisticsGatherer4Scheduler  ApexClass:TestLFLBatchStatisticsGatherer4Scheduler --test-level RunSpecifiedTests  --tests ApexClass:TestLFLAggregateResultIterable4 TestLFLBatchStatisticsGatherer4 TestLFLBatchStatisticsGatherer4Scheduler --target-org LFLPARTIAL -w 20

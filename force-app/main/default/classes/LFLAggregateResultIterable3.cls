@@ -18,4 +18,3 @@ public class LFLAggregateResultIterable3 implements Iterable<AggregateResult> {
     return new LFLAggregateResultIterator(aggresults);
   }
 }
-
