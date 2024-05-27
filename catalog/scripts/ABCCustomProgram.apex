@@ -11,7 +11,7 @@ for (AggregateResult ar : [
   i = Integer.valueOf(currentmax.substringAfterLast('-')) + 1;
 }
 
-System.debug('Current MAX SDID=' + currentmax);
+System.debug('Current MAX PID=' + currentmax);
 System.debug(
   'Next integer to be assigned=' +
     i +
