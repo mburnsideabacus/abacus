@@ -135,10 +135,6 @@ global class LFLBatchStatisticsGatherer implements Database.Batchable<AggregateR
 
     System.debug('updating Client Objectives');
 
-    if (!Test.isRunningTest()) {
-      //update accountList;
-    }
-
     Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
     String orgname = UserInfo.getOrganizationName();
     msg += '\nJob Completion\n-------------------\n';
