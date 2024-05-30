@@ -29,8 +29,8 @@ for (AggregateResult ar : [
     max(lastmodifieddate) modifieddate
   FROM session_obj__c
   WHERE
-    lastmodifieddate < 2023-12-31T00:00:00Z
-    AND lastmodifieddate >= 2023-11-01T00:00:00Z
+    lastmodifieddate < 2024-05-30T00:00:00Z
+    AND lastmodifieddate >= 2024-05-01T00:00:00Z
     AND session__r.status__c = 'Closed'
   GROUP BY session__r.client__c, objective__c, correct__c
   ORDER BY objective__c
@@ -99,7 +99,7 @@ for (AggregateResult ar : [
 System.debug('***** update map size ====> ' + updatesToCOMap.keySet().size());
 if (!updatesToCOMap.isEmpty()) {
   System.debug('updating');
-  //update updatesToCOMap.values();
+  update updatesToCOMap.values();
 }
 
 // Id batchInstanceId = Database.executeBatch(
